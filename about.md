@@ -71,7 +71,7 @@ I’m a single-dog.  But codes and godgirl are my favorite.  Life is colorful, t
 
 <p>邮箱：18500395668@163.com &emsp;<a href="#" onmouseover="mousemethod('block','img1')" onmouseout="mousemethod('none','img1')" style="color:#FF4500;text-decoration:none">微信：18500395668</a>
 <p>
-<a href="/lovekang/" style="color:#708090"  target="_blank"> <h5>Website Time</h5></a>  
+<a href="/love" style="color:#708090"  target="_blank"> <h5>Website Time</h5></a>  
 </p>
 
 
