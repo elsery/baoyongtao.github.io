@@ -12,7 +12,7 @@ url: "http://blog.csdn.net/elsery/"
 comment:
     provider: duoshuo
     duoshuo:
-     short_name: robotkang
+    short_name: Sharker
 
 # Social
 social:
