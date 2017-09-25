@@ -99,12 +99,15 @@ ClassLoader，即[Java]类加载器，主要作用是将class加载到JVM内，�
 
 先定义一个Person接口。
 
-    publicinterfacePerson {publicvoidsay();
+    publicinterfacePerson {
+    	public void say();
     }
 
 再定一个高富帅类实现这个接口
 
-    publicclassHighRichHandsomeimplementsPerson {@Overridepublicvoidsay() {
+    publicclassHighRichHandsomeimplementsPerson {
+    @Override
+    public void say() {
             System.out.println("I don't care whether you are rich or not");
         }
     
@@ -116,13 +119,16 @@ ClassLoader，即[Java]类加载器，主要作用是将class加载到JVM内，�
     import java.io.IOException;
     import java.io.InputStream;
     
-    publicclassMyClassLoaderextendsClassLoader{/* 
+    publicclassMyClassLoaderextendsClassLoader{
+    		/* 
          * 覆盖了父类的findClass，实现自定义的classloader
-         */    @Overridepublic Class<?> findClass(String name) {byte[] bt = loadClassData(name);
+         */    
+         @Override
+         public Class<?> findClass(String name) {byte[] bt = loadClassData(name);
             return defineClass(name, bt, 0, bt.length);
         }
     
-        privatebyte[] loadClassData(String className) {
+        private byte[] loadClassData(String className) {
             InputStream is = getClass().getClassLoader().getResourceAsStream(
                     className.replace(".", "/") + ".class");
             ByteArrayOutputStream byteSt = new ByteArrayOutputStream();
@@ -139,12 +145,13 @@ ClassLoader，即[Java]类加载器，主要作用是将class加载到JVM内，�
     }
     
 
-代码很简单，不解释了，最后在[测试](http://lib.csdn.net/base/softwaretest)类LoaderTest里写个测试方法。
+代码很简单，不解释了，最后在[测试]类LoaderTest里写个测试方法。
 
     /**
      * 父类classloader
      * @throws Exception
-     */privatestaticvoidtest2() throws Exception{
+     */
+     private static void test2() throws Exception{
         MyClassLoader loader = new MyClassLoader();
         Class<?> c = loader.loadClass("com.alibaba.classload.HighRichHandsome");
         System.out.println("Loaded by :" + c.getClassLoader());
@@ -163,7 +170,8 @@ main方法中调用这个方法即可。LoaderTest默认构造函数会设置`Ap
     /**
      * 自己的classloader加载
      * @throws Exception
-     */privatestaticvoidtest3() throws Exception{
+     */
+     private static void test3() throws Exception{
         MyClassLoader loader = new MyClassLoader();
         Class<?> c = loader.findClass("com.alibaba.classload.HighRichHandsome");
         System.out.println("Loaded by :" + c.getClassLoader());
@@ -185,7 +193,7 @@ main方法中调用这个方法即可。LoaderTest默认构造函数会设置`Ap
 
 相信大家都写过连接[数据库](http://lib.csdn.net/base/mysql)的例子，基本上就是加载驱动，建立连接，创建请求，写prepareStatement，关闭连接之类的。在这里，有一段代码：
 
-    publicDbTest() {
+    public DbTest() {
         try {
             Class.forName("com.mysql.jdbc.Driver");// 加载驱动
             conn = DriverManager.getConnection(url, "root", "");// 建立连接
@@ -196,7 +204,7 @@ main方法中调用这个方法即可。LoaderTest默认构造函数会设置`Ap
     }
     
 
-我相信大家一开始的时候肯定都有些疑惑，就是Class.forName(“com.[MySQL](http://lib.csdn.net/base/mysql).jdbc.Driver”)，为什么加载驱动是Class.forName，而不是ClassLoader的loadClass？为什么这么写就可以加载驱动了呢？
+我相信大家一开始的时候肯定都有些疑惑，就是Class.forName(“com.MySQL.jdbc.Driver”)，为什么加载驱动是Class.forName，而不是ClassLoader的loadClass？为什么这么写就可以加载驱动了呢？
 
 其实`Class.forName()`是显示加载类，作用是要求JVM查找并加载指定的类，也就是说JVM会执行该类的静态代码段。查看`com.mysql.jdbc.Driver`源码可以发现里面有个静态代码块，在加载后，类里面的静态代码块就执行（主要目的是注册驱动，把自己注册进去），所以主要目的就是为了触发这个静态方法。
 
@@ -210,7 +218,8 @@ main方法中调用这个方法即可。LoaderTest默认构造函数会设置`Ap
 
     /**
      * 对象只加载一次，返回true
-     */privatestaticvoidtest4() {
+     */
+     private static void test4() {
         ClassLoader c1 = LoaderTest.class.getClassLoader();
         LoaderTest loadtest = new LoaderTest();
         ClassLoader c2 = loadtest.getClass().getClassLoader();
