@@ -140,104 +140,46 @@ Java通过Executors提供四种线程池，分别为：
 
 创建一个定长线程池，支持定时及周期性任务执行。延迟执行示例代码如下：
 
-ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(5);
- scheduledThreadPool.schedule(new Runnable() {
-
-@Override
-public void run() {
-    System.out.println("delay 3 seconds");
-}
-}, 3, TimeUnit.SECONDS);
+	ScheduledExecutorService scheduledThreadPool = Executors.newScheduledThreadPool(5);
+	 scheduledThreadPool.schedule(new Runnable() {
+	
+	@Override
+	public void run() {
+	    System.out.println("delay 3 seconds");
+	}
+	}, 3, TimeUnit.SECONDS);
 
     xxxxxxxxxx
 
-9
-
-9
-
- 
-
-1
-
     ScheduledExecutorServicescheduledThreadPool=Executors.newScheduledThreadPool(5);
-
-2
-
     scheduledThreadPool.schedule(newRunnable() {
-
-3
-
-4
-
     @Override
-
-5
-
     publicvoidrun() {
-
-6
-
         System.out.println("delay 3 seconds");
-
-7
 
     }
 
-8
-
     }, 3, TimeUnit.SECONDS);
-
-9
 
 表示延迟3秒执行。
 
 定期执行示例代码如下：
 
-scheduledThreadPool.scheduleAtFixedRate(new Runnable() {
-
-@Override
-public void run() {
-    System.out.println("delay 1 seconds, and excute every 3 seconds");
-}
-}, 1, 3, TimeUnit.SECONDS);
+	scheduledThreadPool.scheduleAtFixedRate(new Runnable() {
+	@Override
+	public void run() {
+	    System.out.println("delay 1 seconds, and excute every 3 seconds");
+	}
+	}, 1, 3, TimeUnit.SECONDS);
 
     xxxxxxxxxx
-
-8
-
-9
-
- 
-
-1
-
-2
-
     scheduledThreadPool.scheduleAtFixedRate(newRunnable() {
-
-3
-
-4
-
     @Override
-
-5
-
     publicvoidrun() {
-
-6
-
         System.out.println("delay 1 seconds, and excute every 3 seconds");
 
-7
-
     }
-
-8
-
     }, 1, 3, TimeUnit.SECONDS);
-
-9
 
 表示延迟1秒后每3秒执行一次。
 
@@ -247,96 +189,40 @@ ScheduledExecutorService比Timer更安全，功能更强大
 
 创建一个单线程化的线程池，它只会用唯一的工作线程来执行任务，保证所有任务按照指定顺序(FIFO, LIFO, 优先级)执行。示例代码如下：
 
-ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
-for (int i = 0; i < 10; i++) {
-final int index = i;
-singleThreadExecutor.execute(new Runnable() {
-
-@Override
-public void run() {
-    try {
-        System.out.println(index);
-    Thread.sleep(2000);
-} catch (InterruptedException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-        }
-}
-    });
-}
+	ExecutorService singleThreadExecutor = Executors.newSingleThreadExecutor();
+	for (int i = 0; i < 10; i++) {
+	final int index = i;
+	singleThreadExecutor.execute(new Runnable() {
+	
+	@Override
+	public void run() {
+	    try {
+	        System.out.println(index);
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {
+	    // TODO Auto-generated catch block
+	    e.printStackTrace();
+	        }
+	}
+	    });
+	}
 
     xxxxxxxxxx
-
-17
-
-17
-
- 
-
-1
-
     ExecutorServicesingleThreadExecutor=Executors.newSingleThreadExecutor();
-
-2
-
     for (inti=0; i<10; i++) {
-
-3
-
     finalintindex=i;
-
-4
-
     singleThreadExecutor.execute(newRunnable() {
-
-5
-
-6
-
     @Override
-
-7
-
     publicvoidrun() {
-
-8
-
         try {
-
-9
-
             System.out.println(index);
-
-10
-
         Thread.sleep(2000);
-
-11
-
     } catch (InterruptedExceptione) {
-
-12
-
         // TODO Auto-generated catch block
-
-13
-
         e.printStackTrace();
-
-14
-
             }
-
-15
-
     }
-
-16
-
         });
-
-17
-
     }
 
 结果依次输出，相当于顺序执行各个任务。
