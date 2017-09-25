@@ -11,56 +11,21 @@ tag: java
 
 执行一个异步任务你还只是如下new Thread吗？
 
-new Thread(new Runnable() {
-
-    @Override
-    public void run() {
-        // TODO Auto-generated method stub
-        }
-    }
-).start();
-
-    xxxxxxxxxx
-
-9
-
-10
-
- 
-
-1
-
-2
-
-    newThread(newRunnable() {
-
-3
-
-4
-
-        @Override
-
-5
-
-        publicvoidrun() {
-
-6
-
+	new Thread(new Runnable() {
+	    @Override
+	    public void run() {
+	        // TODO Auto-generated method stub
+	        }
+	    }
+	).start();
+	    xxxxxxxxxx
+	    newThread(newRunnable() {
+	        @Override
+	        publicvoidrun() {
             // TODO Auto-generated method stub
-
-7
-
             }
-
-8
-
         }
-
-9
-
     ).start();
-
-10
 
 **那你就out太多了，new Thread的弊端如下：**
 
@@ -87,99 +52,41 @@ Java通过Executors提供四种线程池，分别为：
 
 创建一个可缓存线程池，如果线程池长度超过处理需要，可灵活回收空闲线程，若无可回收，则新建线程。示例代码如下：
 
-ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
-    for (int i = 0; i < 10; i++) {
-        final int index = i;
-    try {
-        Thread.sleep(index * 1000);
-    } 
-        catch (InterruptedException e) {
-            e.printStackTrace();
-    }
-
-cachedThreadPool.execute(new Runnable() {
-
-@Override
-public void run() {
-    System.out.println(index);
-}
-});
-}
+	ExecutorService cachedThreadPool = Executors.newCachedThreadPool();
+	    for (int i = 0; i < 10; i++) {
+	        final int index = i;
+	    try {
+	        Thread.sleep(index * 1000);
+	    } 
+	        catch (InterruptedException e) {
+	            e.printStackTrace();
+	    }
+	
+	cachedThreadPool.execute(new Runnable() {
+	
+	@Override
+	public void run() {
+	    System.out.println(index);
+	}
+	});
+	}
 
     xxxxxxxxxx
-
-18
-
-18
-
- 
-
-1
-
     ExecutorServicecachedThreadPool=Executors.newCachedThreadPool();
-
-2
-
         for (inti=0; i<10; i++) {
-
-3
-
             finalintindex=i;
-
-4
-
         try {
-
-5
-
             Thread.sleep(index*1000);
-
-6
-
         } 
-
-7
-
             catch (InterruptedExceptione) {
-
-8
-
                 e.printStackTrace();
-
-9
-
         }
-
-10
-
-11
-
     cachedThreadPool.execute(newRunnable() {
-
-12
-
-13
-
     @Override
-
-14
-
     publicvoidrun() {
-
-15
-
         System.out.println(index);
-
-16
-
     }
-
-17
-
     });
-
-18
-
     }
 
 线程池为无限大，当执行第二个任务时第一个任务已经完成，会复用执行第一个任务的线程，而不用每次新建线程。
@@ -188,99 +95,41 @@ public void run() {
 
 创建一个定长线程池，可控制线程最大并发数，超出的线程会在队列中等待。示例代码如下：
 
-ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
-    for (int i = 0; i < 10; i++) {
-    final int index = i;
+	ExecutorService fixedThreadPool = Executors.newFixedThreadPool(3);
+	    for (int i = 0; i < 10; i++) {
+	    final int index = i;
 
     fixedThreadPool.execute(new Runnable() {
 
-@Override
-public void run() {
-try {
-    System.out.println(index);
-    Thread.sleep(2000);
-} catch (InterruptedException e) {
-    // TODO Auto-generated catch block
-    e.printStackTrace();
-    }
-}
-});
-}
+	@Override
+	public void run() {
+	try {
+	    System.out.println(index);
+	    Thread.sleep(2000);
+	} catch (InterruptedException e) {
+	    // TODO Auto-generated catch block
+	    e.printStackTrace();
+	    }
+	}
+	});
+	}
 
     xxxxxxxxxx
-
-18
-
-18
-
- 
-
-1
-
     ExecutorServicefixedThreadPool=Executors.newFixedThreadPool(3);
-
-2
-
         for (inti=0; i<10; i++) {
-
-3
-
         finalintindex=i;
-
-4
-
-5
-
         fixedThreadPool.execute(newRunnable() {
-
-6
-
-7
-
     @Override
-
-8
-
     publicvoidrun() {
-
-9
-
     try {
-
-10
-
         System.out.println(index);
-
-11
-
         Thread.sleep(2000);
-
-12
-
     } catch (InterruptedExceptione) {
-
-13
-
         // TODO Auto-generated catch block
-
-14
-
         e.printStackTrace();
-
-15
-
         }
-
-16
-
     }
-
-17
-
     });
-
-18
-
     }
 
 因为线程池大小为3，每个任务输出index后sleep 2秒，所以每两秒打印3个数字。
@@ -539,264 +388,108 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
 
 ### **实例代码**一、固定大小的线程池，newFixedThreadPool：
 
-package app.executors;  
-
-import java.util.concurrent.Executors;  
-import java.util.concurrent.ExecutorService;  
-
-/** 
- * Java线程：线程池 
- *  
- * @author xiho
- */  
-public class Test {  
-    public static void main(String[] args) {  
-        // 创建一个可重用固定线程数的线程池  
-        ExecutorService pool = Executors.newFixedThreadPool(2);  
-        // 创建线程  
-        Thread t1 = new MyThread();  
-        Thread t2 = new MyThread();  
-        Thread t3 = new MyThread();  
-        Thread t4 = new MyThread();  
-        Thread t5 = new MyThread();  
-        // 将线程放入池中进行执行  
-        pool.execute(t1);  
-        pool.execute(t2);  
-        pool.execute(t3);  
-        pool.execute(t4);  
-        pool.execute(t5);  
-        // 关闭线程池  
-        pool.shutdown();  
-    }  
-}  
-
-class MyThread extends Thread {  
-    @Override  
-    public void run() {  
-        System.out.println(Thread.currentThread().getName() + "正在执行。。。");  
-    }  
-}  
+	package app.executors;  
+	
+	import java.util.concurrent.Executors;  
+	import java.util.concurrent.ExecutorService;  
+	
+	/** 
+	 * Java线程：线程池 
+	 *  
+	 * @author xiho
+	 */  
+	public class Test {  
+	    public static void main(String[] args) {  
+	        // 创建一个可重用固定线程数的线程池  
+	        ExecutorService pool = Executors.newFixedThreadPool(2);  
+	        // 创建线程  
+	        Thread t1 = new MyThread();  
+	        Thread t2 = new MyThread();  
+	        Thread t3 = new MyThread();  
+	        Thread t4 = new MyThread();  
+	        Thread t5 = new MyThread();  
+	        // 将线程放入池中进行执行  
+	        pool.execute(t1);  
+	        pool.execute(t2);  
+	        pool.execute(t3);  
+	        pool.execute(t4);  
+	        pool.execute(t5);  
+	        // 关闭线程池  
+	        pool.shutdown();  
+	    }  
+	}  
+	
+	class MyThread extends Thread {  
+	    @Override  
+	    public void run() {  
+	        System.out.println(Thread.currentThread().getName() + "正在执行。。。");  
+	    }  
+	}  
 
     xxxxxxxxxx
-
-37
-
-37
-
- 
-
-1
-
     packageapp.executors;  
-
-2
-
-3
-
     importjava.util.concurrent.Executors;  
-
-4
-
     importjava.util.concurrent.ExecutorService;  
-
-5
-
-6
-
     /** 
-
-7
-
      * Java线程：线程池 
-
-8
-
      *  
-
-9
-
      * @author xiho
-
-10
-
      */  
-
-11
-
     publicclassTest {  
-
-12
-
         publicstaticvoidmain(String[] args) {  
-
-13
-
             // 创建一个可重用固定线程数的线程池  
-
-14
-
             ExecutorServicepool=Executors.newFixedThreadPool(2);  
-
-15
-
             // 创建线程  
-
-16
-
             Threadt1=newMyThread();  
-
-17
-
             Threadt2=newMyThread();  
-
-18
-
             Threadt3=newMyThread();  
-
-19
-
             Threadt4=newMyThread();  
-
-20
-
             Threadt5=newMyThread();  
-
-21
-
             // 将线程放入池中进行执行  
-
-22
-
             pool.execute(t1);  
-
-23
-
             pool.execute(t2);  
-
-24
-
             pool.execute(t3);  
-
-25
-
             pool.execute(t4);  
-
-26
-
             pool.execute(t5);  
-
-27
-
             // 关闭线程池  
-
-28
-
             pool.shutdown();  
-
-29
-
         }  
-
-30
-
     }  
-
-31
-
-32
-
     classMyThreadextendsThread {  
-
-33
-
         @Override  
-
-34
-
         publicvoidrun() {  
-
-35
-
             System.out.println(Thread.currentThread().getName() +"正在执行。。。");  
-
-36
-
         }  
-
-37
-
     }  
 
 **输出结果：**
 
-pool-1-thread-1正在执行。。。  
-pool-1-thread-3正在执行。。。  
-pool-1-thread-4正在执行。。。  
-pool-1-thread-2正在执行。。。  
-pool-1-thread-5正在执行。。。  
+	pool-1-thread-1正在执行。。。  
+	pool-1-thread-3正在执行。。。  
+	pool-1-thread-4正在执行。。。  
+	pool-1-thread-2正在执行。。。  
+	pool-1-thread-5正在执行。。。  
 
     xxxxxxxxxx
-
-5
-
-5
-
- 
-
-1
-
     pool-1-thread-1正在执行。。。  
-
-2
-
     pool-1-thread-3正在执行。。。  
-
-3
-
     pool-1-thread-4正在执行。。。  
-
-4
-
     pool-1-thread-2正在执行。。。  
-
-5
-
     pool-1-thread-5正在执行。。。  
 
 改变ExecutorService pool = Executors.newFixedThreadPool(5)中的参数：ExecutorService pool = Executors.newFixedThreadPool(2)，输出结果是：
 
-pool-1-thread-1正在执行。。。  
-pool-1-thread-1正在执行。。。  
-pool-1-thread-2正在执行。。。  
-pool-1-thread-1正在执行。。。  
-pool-1-thread-2正在执行。。。  
+	pool-1-thread-1正在执行。。。  
+	pool-1-thread-1正在执行。。。  
+	pool-1-thread-2正在执行。。。  
+	pool-1-thread-1正在执行。。。  
+	pool-1-thread-2正在执行。。。  
 
     xxxxxxxxxx
-
-5
-
-5
-
- 
-
-1
-
     pool-1-thread-1正在执行。。。  
-
-2
-
     pool-1-thread-1正在执行。。。  
-
-3
-
     pool-1-thread-2正在执行。。。  
-
-4
-
     pool-1-thread-1正在执行。。。  
-
-5
-
     pool-1-thread-2正在执行。。。  
 
 从以上结果可以看出，newFixedThreadPool的参数指定了可以运行的线程的最大数目，超过这个数目的线程加进去以后，不会运行。其次，加入线程池的线程属于托管状态，线程的运行不受加入顺序的影响。
@@ -806,38 +499,17 @@ pool-1-thread-2正在执行。。。
 仅仅是把上述代码中的ExecutorService pool = Executors.newFixedThreadPool(2)改为ExecutorService pool = Executors.newSingleThreadExecutor();
 **输出结果：**
 
-pool-1-thread-1正在执行。。。  
-pool-1-thread-1正在执行。。。  
-pool-1-thread-1正在执行。。。  
-pool-1-thread-1正在执行。。。  
-pool-1-thread-1正在执行。。。  
+	pool-1-thread-1正在执行。。。  
+	pool-1-thread-1正在执行。。。  
+	pool-1-thread-1正在执行。。。  
+	pool-1-thread-1正在执行。。。  
+	pool-1-thread-1正在执行。。。  
 
     xxxxxxxxxx
-
-5
-
-5
-
- 
-
-1
-
     pool-1-thread-1正在执行。。。  
-
-2
-
     pool-1-thread-1正在执行。。。  
-
-3
-
     pool-1-thread-1正在执行。。。  
-
-4
-
     pool-1-thread-1正在执行。。。  
-
-5
-
     pool-1-thread-1正在执行。。。  
 
 可以看出，每次调用execute方法，其实最后都是调用了thread-1的run方法。
@@ -848,45 +520,25 @@ pool-1-thread-1正在执行。。。
 
 **输出结果：**
 
-pool-1-thread-1正在执行。。。  
-pool-1-thread-2正在执行。。。  
-pool-1-thread-4正在执行。。。  
-pool-1-thread-3正在执行。。。  
-pool-1-thread-5正在执行。。。  
+	pool-1-thread-1正在执行。。。  
+	pool-1-thread-2正在执行。。。  
+	pool-1-thread-4正在执行。。。  
+	pool-1-thread-3正在执行。。。  
+	pool-1-thread-5正在执行。。。  
 
     xxxxxxxxxx
 
-5
-
-5
-
- 
-
-1
-
     pool-1-thread-1正在执行。。。  
-
-2
-
     pool-1-thread-2正在执行。。。  
-
-3
-
     pool-1-thread-4正在执行。。。  
-
-4
-
     pool-1-thread-3正在执行。。。  
-
-5
-
     pool-1-thread-5正在执行。。。  
 
 这种方式的特点是：可根据需要创建新线程的线程池，但是在以前构造的线程可用时将重用它们。
 
 ### **四、延迟连接池，newScheduledThreadPool：**
 
-public class TestScheduledThreadPoolExecutor {
+	public class TestScheduledThreadPoolExecutor {
 
     public static void main(String[] args) {
 
@@ -918,194 +570,58 @@ public class TestScheduledThreadPoolExecutor {
 
                   }, 1000, 2000, TimeUnit.MILLISECONDS);
 
-    }
+    	}
 
-}
+	}
 
     xxxxxxxxxx
 
-35
-
-35
-
- 
-
-1
-
     publicclassTestScheduledThreadPoolExecutor {
-
-2
-
-3
-
         publicstaticvoidmain(String[] args) {
-
-4
-
-5
-
             ScheduledThreadPoolExecutorexec=newScheduledThreadPoolExecutor(1);
-
-6
-
-7
-
             exec.scheduleAtFixedRate(newRunnable() {//每隔一段时间就触发异常
-
-8
-
-9
-
                           @Override
-
-10
-
-11
-
                           publicvoidrun() {
-
-12
-
-13
-
                                //throw new RuntimeException();
-
-14
-
-15
-
                                System.out.println("================");
-
-16
-
-17
-
                           }
-
-18
-
-19
-
                       }, 1000, 5000, TimeUnit.MILLISECONDS);
 
-20
-
-21
-
             exec.scheduleAtFixedRate(newRunnable() {//每隔一段时间打印系统时间，证明两者是互不影响的
-
-22
-
-23
-
                           @Override
-
-24
-
-25
-
                           publicvoidrun() {
-
-26
-
-27
-
                                System.out.println(System.nanoTime());
-
-28
-
-29
-
                           }
-
-30
-
-31
-
                       }, 1000, 2000, TimeUnit.MILLISECONDS);
-
-32
-
-33
-
         }
-
-34
-
-35
-
     }
 
 **输出结果：**
 
-================
-
-8384644549516
-
-8386643829034
-
-8388643830710
-
-================
-
-8390643851383
-
-8392643879319
-
-8400643939383
+	================
+	
+	8384644549516
+	
+	8386643829034
+	
+	8388643830710
+	
+	================
+	
+	8390643851383
+	
+	8392643879319
+	
+	8400643939383
 
     xxxxxxxxxx
-
-15
-
-15
-
- 
-
-1
-
+    
     ================
-
-2
-
-3
-
     8384644549516
-
-4
-
-5
-
     8386643829034
-
-6
-
-7
-
     8388643830710
-
-8
-
-9
-
     ================
-
-10
-
-11
-
     8390643851383
-
-12
-
-13
-
     8392643879319
-
-14
-
-15
-
     8400643939383
-
 - 
