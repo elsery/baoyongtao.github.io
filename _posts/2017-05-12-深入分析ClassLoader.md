@@ -100,13 +100,13 @@ ClassLoader，即[Java]类加载器，主要作用是将class加载到JVM内，�
 
 先定义一个Person接口。
 
-    publicinterfacePerson {
+    public interface Person {
     	public void say();
     }
 
 再定一个高富帅类实现这个接口
 
-    publicclassHighRichHandsomeimplementsPerson {
+    public class HighRichHandsome implements Person {
     @Override
     public void say() {
             System.out.println("I don't care whether you are rich or not");
@@ -120,7 +120,7 @@ ClassLoader，即[Java]类加载器，主要作用是将class加载到JVM内，�
     import java.io.IOException;
     import java.io.InputStream;
     
-    publicclassMyClassLoaderextendsClassLoader{
+    public class MyClassLoader extends ClassLoader{
     		/* 
          * 覆盖了父类的findClass，实现自定义的classloader
          */    
