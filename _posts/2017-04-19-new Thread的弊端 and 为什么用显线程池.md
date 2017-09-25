@@ -18,7 +18,7 @@ tag: java
 	        }
 	    }
 	).start();
-	    xxxxxxxxxx
+	    
 	    newThread(newRunnable() {
 	        @Override
 	        publicvoidrun() {
@@ -71,7 +71,7 @@ Java通过Executors提供四种线程池，分别为：
 	});
 	}
 
-    xxxxxxxxxx
+    
     ExecutorServicecachedThreadPool=Executors.newCachedThreadPool();
         for (inti=0; i<10; i++) {
             finalintindex=i;
@@ -114,7 +114,7 @@ Java通过Executors提供四种线程池，分别为：
 	});
 	}
 
-    xxxxxxxxxx
+    
     ExecutorServicefixedThreadPool=Executors.newFixedThreadPool(3);
         for (inti=0; i<10; i++) {
         finalintindex=i;
@@ -149,7 +149,7 @@ Java通过Executors提供四种线程池，分别为：
 	}
 	}, 3, TimeUnit.SECONDS);
 
-    xxxxxxxxxx
+    
 
     ScheduledExecutorServicescheduledThreadPool=Executors.newScheduledThreadPool(5);
     scheduledThreadPool.schedule(newRunnable() {
@@ -172,7 +172,7 @@ Java通过Executors提供四种线程池，分别为：
 	}
 	}, 1, 3, TimeUnit.SECONDS);
 
-    xxxxxxxxxx
+    
     scheduledThreadPool.scheduleAtFixedRate(newRunnable() {
     @Override
     publicvoidrun() {
@@ -207,7 +207,7 @@ ScheduledExecutorService比Timer更安全，功能更强大
 	    });
 	}
 
-    xxxxxxxxxx
+    
     ExecutorServicesingleThreadExecutor=Executors.newSingleThreadExecutor();
     for (inti=0; i<10; i++) {
     finalintindex=i;
@@ -312,7 +312,7 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
 	    }  
 	}  
 
-    xxxxxxxxxx
+    
     packageapp.executors;  
     importjava.util.concurrent.Executors;  
     importjava.util.concurrent.ExecutorService;  
@@ -356,7 +356,7 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
 	pool-1-thread-2正在执行。。。  
 	pool-1-thread-5正在执行。。。  
 
-    xxxxxxxxxx
+    
     pool-1-thread-1正在执行。。。  
     pool-1-thread-3正在执行。。。  
     pool-1-thread-4正在执行。。。  
@@ -371,7 +371,7 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
 	pool-1-thread-1正在执行。。。  
 	pool-1-thread-2正在执行。。。  
 
-    xxxxxxxxxx
+    
     pool-1-thread-1正在执行。。。  
     pool-1-thread-1正在执行。。。  
     pool-1-thread-2正在执行。。。  
@@ -391,7 +391,7 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
 	pool-1-thread-1正在执行。。。  
 	pool-1-thread-1正在执行。。。  
 
-    xxxxxxxxxx
+    
     pool-1-thread-1正在执行。。。  
     pool-1-thread-1正在执行。。。  
     pool-1-thread-1正在执行。。。  
@@ -412,7 +412,7 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
 	pool-1-thread-3正在执行。。。  
 	pool-1-thread-5正在执行。。。  
 
-    xxxxxxxxxx
+    
 
     pool-1-thread-1正在执行。。。  
     pool-1-thread-2正在执行。。。  
@@ -460,7 +460,7 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
 
 	}
 
-    xxxxxxxxxx
+    
 
     publicclassTestScheduledThreadPoolExecutor {
         publicstaticvoidmain(String[] args) {
@@ -500,7 +500,7 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
 	
 	8400643939383
 
-    xxxxxxxxxx
+    
     
     ================
     8384644549516
