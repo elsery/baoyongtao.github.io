@@ -21,7 +21,7 @@ tag: java
 	    
 	    newThread(newRunnable() {
 	        @Override
-	        publicvoidrun() {
+	        public void run() {
             // TODO Auto-generated method stub
             }
         }
@@ -82,11 +82,11 @@ Java通过Executors提供四种线程池，分别为：
                 e.printStackTrace();
         }
     cachedThreadPool.execute(newRunnable() {
-    @Override
-    publicvoidrun() {
-        System.out.println(index);
-    }
-    });
+	    @Override
+	    public void run() {
+	        System.out.println(index);
+	    }
+	  });
     }
 
 线程池为无限大，当执行第二个任务时第一个任务已经完成，会复用执行第一个任务的线程，而不用每次新建线程。
@@ -120,7 +120,7 @@ Java通过Executors提供四种线程池，分别为：
         finalintindex=i;
         fixedThreadPool.execute(newRunnable() {
     @Override
-    publicvoidrun() {
+    public void run() {
     try {
         System.out.println(index);
         Thread.sleep(2000);
@@ -154,7 +154,7 @@ Java通过Executors提供四种线程池，分别为：
     ScheduledExecutorServicescheduledThreadPool=Executors.newScheduledThreadPool(5);
     scheduledThreadPool.schedule(newRunnable() {
     @Override
-    publicvoidrun() {
+    public void run() {
         System.out.println("delay 3 seconds");
 
     }
@@ -175,7 +175,7 @@ Java通过Executors提供四种线程池，分别为：
     
     scheduledThreadPool.scheduleAtFixedRate(newRunnable() {
     @Override
-    publicvoidrun() {
+    public void run() {
         System.out.println("delay 1 seconds, and excute every 3 seconds");
 
     }
@@ -213,7 +213,7 @@ ScheduledExecutorService比Timer更安全，功能更强大
     finalintindex=i;
     singleThreadExecutor.execute(newRunnable() {
     @Override
-    publicvoidrun() {
+    public void run() {
         try {
             System.out.println(index);
         Thread.sleep(2000);
@@ -321,8 +321,8 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
      *  
      * @author xiho
      */  
-    publicclassTest {  
-        publicstaticvoidmain(String[] args) {  
+    public class Test {  
+        public static void main(String[] args) {  
             // 创建一个可重用固定线程数的线程池  
             ExecutorServicepool=Executors.newFixedThreadPool(2);  
             // 创建线程  
@@ -343,7 +343,7 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
     }  
     classMyThreadextendsThread {  
         @Override  
-        publicvoidrun() {  
+        public void run() {  
             System.out.println(Thread.currentThread().getName() +"正在执行。。。");  
         }  
     }  
@@ -434,7 +434,7 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
 
                       @Override
 
-                      publicvoid run() {
+                      public void run() {
 
                            //throw new RuntimeException();
 
@@ -447,27 +447,22 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
         exec.scheduleAtFixedRate(new Runnable() {//每隔一段时间打印系统时间，证明两者是互不影响的
 
                       @Override
-
-                      publicvoid run() {
-
+                      public void run() {
                            System.out.println(System.nanoTime());
-
                       }
-
                   }, 1000, 2000, TimeUnit.MILLISECONDS);
-
-    	}
+         	}
 
 	}
 
     
 
-    publicclassTestScheduledThreadPoolExecutor {
-        publicstaticvoidmain(String[] args) {
+    public class TestScheduledThreadPoolExecutor {
+        public static void main(String[] args) {
             ScheduledThreadPoolExecutorexec=newScheduledThreadPoolExecutor(1);
             exec.scheduleAtFixedRate(newRunnable() {//每隔一段时间就触发异常
                           @Override
-                          publicvoidrun() {
+                          public void run() {
                                //throw new RuntimeException();
                                System.out.println("================");
                           }
@@ -475,7 +470,7 @@ ScheduledThreadPoolExecutor： 继承ThreadPoolExecutor的ScheduledExecutorServi
 
             exec.scheduleAtFixedRate(newRunnable() {//每隔一段时间打印系统时间，证明两者是互不影响的
                           @Override
-                          publicvoidrun() {
+                          public void run() {
                                System.out.println(System.nanoTime());
                           }
                       }, 1000, 2000, TimeUnit.MILLISECONDS);
