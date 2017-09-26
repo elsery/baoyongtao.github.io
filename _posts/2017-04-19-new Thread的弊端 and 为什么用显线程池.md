@@ -64,11 +64,11 @@ Java通过Executors提供四种线程池，分别为：
 	
 	cachedThreadPool.execute(new Runnable() {
 	
-	@Override
-	public void run() {
-	    System.out.println(index);
-	}
-	});
+		@Override
+		public void run() {
+		    System.out.println(index);
+		}
+		});
 	}
 
     
@@ -119,17 +119,17 @@ Java通过Executors提供四种线程池，分别为：
         for (inti=0; i<10; i++) {
         finalintindex=i;
         fixedThreadPool.execute(newRunnable() {
-    @Override
-    public void run() {
-    try {
-        System.out.println(index);
-        Thread.sleep(2000);
-    } catch (InterruptedExceptione) {
-        // TODO Auto-generated catch block
-        e.printStackTrace();
-        }
-    }
-    });
+    	@Override
+	    public void run() {
+	    try {
+	        System.out.println(index);
+	        Thread.sleep(2000);
+	    } catch (InterruptedExceptione) {
+	        // TODO Auto-generated catch block
+	        e.printStackTrace();
+	        }
+	    }
+	    });
     }
 
 因为线程池大小为3，每个任务输出index后sleep 2秒，所以每两秒打印3个数字。
