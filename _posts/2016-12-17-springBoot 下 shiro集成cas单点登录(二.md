@@ -23,8 +23,8 @@ maven添加相关依赖
 		</dependency>
 ```
 重修shiro核心文件
-```java
 ShiroCasConfiguration.java
+```java
 package com.example.springboot.commom.config.shiro;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
