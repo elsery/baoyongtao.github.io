@@ -6,7 +6,7 @@ description: "java,cas,sso,shiro"
 tag: java,shiro,cas
 --- 
 
-    单点登录（Single Sign On , 简称 SSO ）是目前比较流行的服务于企业业务整合的解决方案之一， SSO 使得在多个应用系统中，用户只需要登录一次就可以访问所有相互信任的应用系统。CAS(Central Authentication Service)是一款不错的针对 Web 应用的单点登录框架，本文介绍了 CAS 的原理、协议、在 Tomcat 中的配置和使用，对于采用 CAS 实现轻量级单点登录解决方案的入门读者具有一定指导作用。
+>  单点登录（Single Sign On , 简称 SSO ）是目前比较流行的服务于企业业务整合的解决方案之一， SSO 使得在多个应用系统中，用户只需要登录一次就可以访问所有相互信任的应用系统。CAS(Central Authentication Service)是一款不错的针对 Web 应用的单点登录框架，本文介绍了 CAS 的原理、协议、在 Tomcat 中的配置和使用，对于采用 CAS 实现轻量级单点登录解决方案的入门读者具有一定指导作用。
 
 ## CAS 介绍
 
@@ -28,14 +28,12 @@ CAS Client 与受保护的客户端应用部署在一起，以 Filter 方式保�
 
 另外，CAS 协议中还提供了 Proxy （代理）模式，以适应更加高级、复杂的应用场景，具体介绍可以参考 CAS 官方网站上的相关文档。
 
-### 一)[准备工作](http://www.ibm.com/developerworks/cn/opensource/os-cn-cas/index.html)
+### 一)[准备工作]
 
-[本文中的例子以 tomcat7, cas4.0.0 为例进行讲解](http://www.ibm.com/developerworks/cn/opensource/os-cn-cas/index.html)
+[本文中的例子以 tomcat7, cas4.0.0 为例进行讲解]
 
-- [CAS Server版本：cas-server-4.0.0](http://www.ibm.com/developerworks/cn/opensource/os-cn-cas/index.html)
-- [CAS Client版本：cas-client-
-
-3.1.12](http://www.ibm.com/developerworks/cn/opensource/os-cn-cas/index.html)
+- [CAS Server版本：cas-server-4.0.0]
+- [CAS Client版本：cas-client-3.1.12]
 
 >  CAS 官网 : [https://www.apereo.org/](https://www.apereo.org/)
 > 
@@ -53,7 +51,7 @@ CAS Client 与受保护的客户端应用部署在一起，以 Filter 方式保�
 
 ## 二)[创建证书](http://www.ibm.com/developerworks/cn/opensource/os-cn-cas/index.html)
 
-        证书是单点登录认证系统中很重要的一把钥匙，客户端于服务器的交互安全靠的就是证书；本教程由于是演示所以就自己用JDK自带的keytool工具生成证书；如果以后真正在产品环境中使用肯定要去证书提供商去购买，证书认证一般都是由VeriSign认证，中文官方网站：[http://www.verisign.com/cn/](http://www.verisign.com/cn/)
+>  证书是单点登录认证系统中很重要的一把钥匙，客户端于服务器的交互安全靠的就是证书；本教程由于是演示所以就自己用JDK自带的keytool工具生成证书；如果以后真正在产品环境中使用肯定要去证书提供商去购买，证书认证一般都是由VeriSign认证，中文官方网站：[http://www.verisign.com/cn/](http://www.verisign.com/cn/)
 
 用JDK自带的keytool工具生成证书：
 
@@ -68,10 +66,8 @@ wsria :证书别名
 
 d:/keys/wsriakey :生成位置
 
-借用网上证书解释![用keytool生成证书](/share/resources/0d05ee77-f6f9-4d9a-91b0-0fda65647310/index_files/0.42969394382089376.png)
-
+借用网上证书解释![用keytool生成证书](http://4315e09a.wiz03.com/share/resources/0d05ee77-f6f9-4d9a-91b0-0fda65647310/index_files/0.42969394382089376.png)
 [https://www.apereo.org/](https://www.apereo.org/)
-[http://www.ibm.com/developerworks/cn/opensource/os-cn-cas/index.html](http://www.ibm.com/developerworks/cn/opensource/os-cn-cas/index.html)
 注意!注意!注意!!第一项 您的名字与姓氏 一定写上一会要用得host 域名 ,记住了下面我们就靠这个了[http://www.ja-sig.org/downloads/cas/cas-server-3.1.1-release.zip](http://www.ja-sig.org/downloads/cas/cas-server-3.1.1-release.zip)
 
  
@@ -121,17 +117,17 @@ D:\keys>keytool -export -file d:/keys/wsria.crt -alias wsria -keystore d:/keys/w
 
 打开tomcat目录的conf/server.xml文件，开启83和87行的注释代码，并设置keystoreFile、keystorePass修改结果如下：
 
-![](/share/resources/0d05ee77-f6f9-4d9a-91b0-0fda65647310/index_files/7249c743-cb92-4d73-840e-4de653787198.png)
+![](http://4315e09a.wiz03.com/share/resources/0d05ee77-f6f9-4d9a-91b0-0fda65647310/index_files/7249c743-cb92-4d73-840e-4de653787198.png)
  
 
-    
-    1. <Connector port="8443" protocol="org.apache.coyote.http11.Http11Protocol"
-    2.                maxThreads="150"SSLEnabled="true" scheme="https" secure="true"
-    3. 			    keystoreFile="D:\keys\wsriakey"
-    4. 				 keystorePass="admin123"
-    5.                clientAuth="false" sslProtocol="TLS"/>
-    
-    
+``` xml   
+ <Connector port="8443" protocol="org.apache.coyote.http11.Http11Protocol"
+        maxThreads="150"SSLEnabled="true" scheme="https" secure="true"
+	    keystoreFile="D:\keys\wsriakey"
+		 keystorePass="admin123"
+        clientAuth="false" sslProtocol="TLS"/>
+```    
+
 
 keystoreFile 证书位置  
 keystorePass 你设置得密码
