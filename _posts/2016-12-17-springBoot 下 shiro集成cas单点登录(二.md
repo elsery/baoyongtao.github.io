@@ -3,7 +3,7 @@ layout: post
 title: "springBoot 下 shiro集成cas单点登录(二"
 date: 2016-12-17
 description: "java,cas,sso,shiro"
-tag: java,shiro,cas
+tag: java
 --- 
 >下面开始整合shiro  (springBoot项目)所以配置方式和spring不一样 但是原理一样 通用
 
