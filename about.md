@@ -7,7 +7,7 @@ date: 2017-03-01
 
 <p>
 一个即将走出象牙塔的 Maker「未更新」<a href="{{ site.baseurl }}/jianli.pdf" target="_blank"> 「我的简历」 </a>    
-
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 style="display:none" src="//music.163.com/outchain/player?type=2&id=28912026&auto=1&height=66"></iframe>
 
 <div style="color:#FF6633">
 <p>	三尺微命，一介书生。求学于卫星湖畔，黄瓜山下，欲潜心研究智能机器人开发应用之道。然所学颇杂，对诸多方面均有涉猎，喜欢研究一些新技术和关注一些最新的科技~
@@ -73,7 +73,7 @@ I’m a single-dog.  But codes and godgirl are my favorite.  Life is colorful, t
 <p>
 <a href="/love" style="color:#708090"  target="_blank"> <h5>对于未来的一半</h5></a>  
 </p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28912026&auto=1&height=66"></iframe>
+
 ----------
 > 我的，你的，他的风景
 	
