@@ -74,9 +74,8 @@ I’m a single-dog.  But codes and godgirl are my favorite.  Life is colorful, t
 <a href="/love" style="color:#708090"  target="_blank"> <h5>对于未来的一半</h5></a>  
 </p>
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=28912026&auto=1&height=66"></iframe>
->p
-
-	我的，你的，他的风景
+----------
+> 我的，你的，他的风景
 	
 	哭的，笑的，梦的心情
 	
