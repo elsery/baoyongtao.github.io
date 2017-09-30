@@ -3,22 +3,21 @@ layout: page
 title: 资源「USEFUL LINKS」 
 ---
 
-> 克隆的小东西有用的就留着用，有什么好用的可以给我留言
-</br>
-</br>
+>   克隆的小东西有用的就留着用，有什么好用的可以给我留言
+
 <h3>关于我的记录</h3>
 <p>
-
+<p>
 <a href="/college/" target="_blank">大学|四年</a>- 记青春年华.  
-</br>
+<p>
 <a href="/college/" style="color:#DC143C" target="_blank">二三好友</a>- 似水流年 & FLAG
-</br>
+<p>
 <a href="/book/" style="color:#DC143C" target="_blank">个人书单</a>-  FLAG  
-</br>
+<p>
 <a href="http://wiki.robotkang.cc" target="_blank" style="text-decoration:none" > Robotkang's Wiki </a>个人维基百科库，还未整理！    
-</br>
+<p>
 <a href="/app/" target="_blank">APP下载1</a>
-</br>
+<p>
 <a href="/APP/" target="_blank">APP下载2</a>- 专属软件.  
 <h3> 资源分享</h3>   
 <P>
