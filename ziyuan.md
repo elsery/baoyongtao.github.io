@@ -14,9 +14,7 @@ title: 资源「USEFUL LINKS」
 <p>
 <a href="/book/" style="color:#DC143C" target="_blank">个人书单</a>-  FLAG  
 <p>
-<a href="/photography/" target="_blank">APP下载1</a>
-<p>
-<a href="/photography/" target="_blank">APP下载2</a>- 专属软件.  
+<a href="/photography/" target="_blank">摄影资源</a>- 专属软件.  
 <h3> 资源分享</h3>   
 <P>
 <a href="http://jekyllthemes.org"  > Jekyll主题合集</a>我用的就是jekyll。           <a href="https://github.com/hexojs/hexo/wiki/Themes" target="_blank"> Hexo主题合集</a>使用方法里面
