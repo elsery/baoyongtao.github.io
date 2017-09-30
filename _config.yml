@@ -77,7 +77,7 @@ paginate_path: "page/:num/"
 
 valine:
   enable: true
-  appId: 5z3QHKTEMlSqxReRnfeFG1cC-gzGzoHsz
-  appKey: 59CrEdy9yw1xmqcDQ4JcJbWy
+  appId: CWa3VWGExyX5qBwL6BQ7mwHv-gzGzoHsz
+  appKey: KxtOwoN1GTvwt1daWglcosv8
 
 
