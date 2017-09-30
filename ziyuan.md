@@ -8,10 +8,6 @@ title: 资源「USEFUL LINKS」
 <h3>关于我的记录</h3>
 <p>
 <p>
-<a href="/college/" target="_blank">大学|四年</a>- 记青春年华.  
-<p>
-<a href="/college/" style="color:#DC143C" target="_blank">二三好友</a>- 似水流年 & FLAG
-<p>
 <a href="/book/" style="color:#DC143C" target="_blank">个人书单</a>-  FLAG  
 <p>
 <a href="/photography/" target="_blank">摄影资源</a>- 专属软件.  
