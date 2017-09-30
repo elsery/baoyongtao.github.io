@@ -1,20 +1,20 @@
 .valine {
     * {
         box-sizing: border-box;
-        font-family: -apple-system, BlinkMacSystemFont, 'Mirages Custom', 'Merriweather', 'Open Sans', "Segoe UI", Roboto, "PingFang SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", Helvetica, Arial, sans-serif;
-        font-size: 14px;
+        //font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", 微软雅黑, "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", Arial, sans-serif;
+        font-size: 16px;
         line-height: 1.42857143;
         color: #555;
         transition: all .3s ease;
     }
     .vwrap {
-        border: 1px solid #dedede;
+        border: 1px solid #f0f0f0;
         border-radius: 4px;
         margin-bottom: 10px;
         overflow: hidden;
         position: relative;
         .vcontrol {
-            background: #fbfbfb;
+            background: #fdfdfd;
             font-size: 0;
             .vident {
                 font-size: 14px;
@@ -83,19 +83,29 @@
             }
         }
     }
+    .power {
+        color: #999;
+        font-size: .75rem;
+        a {
+            font-size: .75rem;
+        }
+    }
     .info {
         font-size: 0;
         padding: 5px;
         .col {
-            font-size: 14px;
+            font-size: .875rem;
             display: inline-block;
             width: 50%;
             vertical-align: middle;
+            
         }
-        .count {}
-    }
-    .power {
-        color: #999;
+        .count {
+            .num {
+                font-weight: 600;
+                font-size: 1.25rem;
+            }
+        }
     }
     a {
         text-decoration: none;
@@ -107,6 +117,8 @@
     ul,
     li {
         list-style: none;
+        margin: 0 auto;
+        padding: 0;
     }
     .txt-center {
         text-align: center;
@@ -133,6 +145,7 @@
     }
     .vbtn {
         display: inline-block;
+        background: #ededed;
         margin-bottom: 0;
         font-weight: 400;
         text-align: center;
@@ -150,7 +163,7 @@
         min-width: 60px;
         max-width: 100%;
         &+.vbtn {
-            margin-left: 20px;
+            margin-left: 1.25rem;
         }
     }
     .vbtn:active,
@@ -159,68 +172,173 @@
         border-color: #3090e4;
         background-color: #fff;
     }
+    .vempty {
+        padding: 1.25px;
+        text-align: center;
+        color: #999;
+    }
     .vlist {
-        border-top: 1px solid #dedede;
-        border-bottom: 1px solid #dedede;
-        padding: 0 10px;
+        padding: 0 .625rem;
         .vcard {
-            padding: 8px 0;
+            padding: 1.25rem 0;
+            position: relative;
             &+.vcard {
-                border-top: 1px solid #dedede;
+                border-top: #f0f0f0 1px solid;
             }
             .vhead {
-                a {
-                    font-size: 18px;
-                    font-weight: 300;
+                .vimg {
+                    width: 3.125rem;
+                    height: 3.125rem;
+                    float: left;
+                    border-radius: 50%;
+                    margin-right: .625rem;
+                }
+                h5 {
+                    font-size: 1rem;
+                    font-weight: 700;
+                    color: #666;
+                    margin-bottom: 6px;
+                    margin-top: 0;
+                    a {
+                        color: #4A4A4A;
+                        &:hover {
+                            color: #D7191A;
+                        }
+                    }
+                    .floor {
+                        position: absolute;
+                        right: 0;
+                        top: 1.25rem;
+                        font-size: .565rem;
+                        line-height: .565rem;
+                        font-weight: 500;
+                        border-radius: .625rem;
+                        display: inline-block;
+                        background-color: #f0f0f0;
+                        color: #ccc;
+                        padding: 3px 5px;
+                        font-style: normal;
+                    }
                 }
                 .vtime {
-                    font-size: 12px;
-                    color: #a9a4a4;
-                    display: inline-block;
-                    padding: 0 5px;
+                    color: #b3b3b3;
+                    font-size: .75rem;
+                    line-height: 1;
                 }
                 .vat {
-                    font-size: 14px;
+                    font-size: .875rem;
                     color: #999;
-                    display: inline-block;
                     padding: 0 5px;
                     cursor: pointer;
-                }
-                .vat:hover {
-                    color: #111;
+                    float: right;
+                    &:hover {
+                        color: #D7191A;
+                    }
                 }
             }
-            .vcomment {
+            section {
+                overflow: hidden;
+            }
+            .vcontent {
                 word-wrap: break-word;
                 white-space: pre-wrap;
                 word-break: break-all;
                 text-align: justify;
-                line-height: 1.8;
+                margin-bottom: .75rem;
+                color: #4A4A4A;
+                font-size: .875rem;
+                line-height: 2;
+                position: relative;
+                a {
+                    font-size: .875rem;
+                }
                 pre,
                 .code {
                     overflow: auto;
+                    padding: 2px 6px;
+                    word-wrap: break-word;
+                    color: #555;
+                    background: #f5f2f2;
+                    border-radius: 3px;
+                    font-size: .875rem;
+                    margin: 5px 0;
+                }
+                code {
+                    @extend .code;
+                    display: inline-block;
+                    vertical-align: middle;
+                    font-style: normal;
+                }
+                &.expand {
+                    cursor: pointer;
+                    max-height: 11.25rem;
+                    overflow: hidden;
+                    &:before {
+                        display: block;
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        top: 0;
+                        bottom: 3.15rem;
+                        pointer-events: none;
+                        background: linear-gradient(180deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, .9));
+                    }
+                    &:after {
+                        display: block;
+                        content: "Click on expand";
+                        text-align: center;
+                        color: #828586;
+                        position: absolute;
+                        width: 100%;
+                        height: 3.15rem;
+                        line-height: 3.15rem;
+                        left: 0;
+                        bottom: 0;
+                        pointer-events: none;
+                        background: rgba(255, 255, 255, .9);
+                    }
                 }
             }
         }
-        .vempty {
-            padding: 20px;
-            text-align: center;
-            color: #999;
+    }
+    .vpage {
+        padding: .35rem;
+        i {
+            display: inline-block;
+            padding: .05rem .65rem;
+            font-size: .785rem;
+            border: 1px solid #f0f0f0;
+            font-style: normal;
+            cursor: pointer;
+            &+i {
+                margin-left: .35rem;
+            }
+            &.active {
+                border: none;
+                color: #ccc;
+                cursor: default;
+            }
         }
+    }
+    .clear {
+        content: '';
+        display: block;
+        clear: both;
     }
     /************ Loading ************/
     .spinner {
-        margin: 10px auto;
-        width: 50px;
-        height: 30px;
+        margin: 0.625rem auto;
+        width: 3.15rem;
+        height: 1.875rem;
         text-align: center;
         font-size: 10px;
     }
     .spinner>div {
         background-color: #9c9c9c;
         height: 100%;
-        width: 6px;
-        margin-right: 3px;
+        width: .375rem;
+        margin-right: 0.19rem;
         display: inline-block;
         -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
         animation: sk-stretchdelay 1.2s infinite ease-in-out;
