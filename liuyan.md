@@ -3,7 +3,7 @@ layout: page
 title: 留言板「MESSAGE」 
 ---
 
-<img src="http://omjh2j5h3.bkt.clouddn.com/2345%E6%88%AA%E5%9B%BE20170318141303_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg" width="360" height="250" alt="huanying"/>
+<img src="/images/avatar.jpg" alt="huanying"/>
 
 
 <p><h4>有什么话要对我说吗？</h4>     
