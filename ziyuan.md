@@ -4,7 +4,7 @@ title: 资源「USEFUL LINKS」
 ---
 
 >   克隆的小东西有用的就留着用，有什么好用的可以给我留言
-
+<p><p><p><p>
 <h3>关于我的记录</h3>
 <p>
 <p>
@@ -13,8 +13,6 @@ title: 资源「USEFUL LINKS」
 <a href="/college/" style="color:#DC143C" target="_blank">二三好友</a>- 似水流年 & FLAG
 <p>
 <a href="/book/" style="color:#DC143C" target="_blank">个人书单</a>-  FLAG  
-<p>
-<a href="http://wiki.robotkang.cc" target="_blank" style="text-decoration:none" > Robotkang's Wiki </a>个人维基百科库，还未整理！    
 <p>
 <a href="/app/" target="_blank">APP下载1</a>
 <p>
