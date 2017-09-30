@@ -133,11 +133,11 @@ var duoshuoQuery = {short_name:"robotkang"};
     <script>
        new Valine({
        // AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
-       av: AV, 
-       el: '.comment', // 
-       app_id: '5z3QHKTEMlSqxReRnfeFG1cC-gzGzoHsz', // 这里填写上面得到的APP ID
-       app_key: '59CrEdy9yw1xmqcDQ4JcJbWy', // 这里填写上面得到的APP KEY
-       placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!' // [v1.0.7 new]留言框占位提示文字
+      		 av: AV, 
+            el: '.comment', // 
+            app_id: 'CWa3VWGExyX5qBwL6BQ7mwHv-gzGzoHsz', // 这里填写上面得到的APP ID
+            app_key: 'KxtOwoN1GTvwt1daWglcosv8', // 这里填写上面得到的APP KEY
+            placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!' // [v1.0.7 new]留言框占位提示文字
        });
 </script>
 </body>
