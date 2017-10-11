@@ -8,7 +8,7 @@ title: 资源「USEFUL LINKS」
 <h3>关于我的记录</h3>
 <p>
 <p>
-<a href="/book/" style="color:#DC143C" target="_blank">个人书单</a>-  FLAG  
+<a href="/book/"  target="_blank">个人书单</a>-  FLAG  
 <p>
 <a href="/photography/" target="_blank">摄影资源</a>- 专属软件.  
 <h3> 资源分享</h3>   

@@ -3,39 +3,33 @@ layout: page
 title: 关于我「ABOUT ME」 
 date: 2017-03-01 
 ---
-<a href="/photos/" target="_blank"><img src="http://omjh2j5h3.bkt.clouddn.com/%E5%A4%A9%E7%AD%96.jpg" width="150" height="150" alt="photos"/></a>
 <p>
-一个即将走出象牙塔的 Maker「未更新」<a href="{{ site.baseurl }}/jianli.pdf" target="_blank"> 「我的简历」 </a>    
+Me 一个虽时工程师，但却有着“天下心，走天下”的心态，工作请看简历「未更新」<a href="{{ site.baseurl }}/jianli.pdf" target="_blank"> 「我的简历」 </a>    
 <div style="color:#FF6633">
-<p>    三尺微命，一介书生。求学于卫星湖畔，黄瓜山下，欲潜心研究智能机器人开发应用之道。然所学颇杂，对诸多方面均有涉猎，喜欢研究一些新技术和关注一些最新的科技~
+<p>常时之余，乐于思哲，品史，鉴文，伤今，怀旧。体验生活之美好，自然之奇妙。可约远行，可探近景，喜欢走，喜欢走的看。
 </p>
 </div>
 <p>
 平时喜欢整理个人博客，逛逛技术论坛     
 <p>
-喜欢日本，想着如果有机会一定会去日本生活一段时间        
 <div style="color:#008B00">
 <p>
 喜欢Spoken English，虽然现在很渣，但一直在努力...        
 </p>
 </div>
 <p>
-同时喜欢老罗和晓松，虽然他俩还撕逼，罗跟谁不撕逼，爱听老罗的单口相声           
+<h3>时光</h3>   
 <p>
-I’m a single-dog.  But codes and godgirl are my favorite.  Life is colorful, this website   is a window which used to present the color of my life.       
-<p>
-<h3> PastTime</h3>   
-<p>
-也许你听说过，「业余时间决定人生」；也许你还听说过，「听过很多道理，依然过不好这一生」。书籍、代码、博客、运动、电影、美剧、游戏，这就是我的业余生活。            
+也许你听说过，「业余时间决定人生」；也许你还听说过，「听过很多道理，依然过不好这一生」。 
 <div style="color:#708090">
 <p>
-     我的能力就这么多。我若全心工作，则必然忽略生活；我若用心生活，则必然一事无成；我若两者兼顾，又难免平庸
+    能者上，庸者下，平者让，偶尔也会羡慕别人，但是想想总是自己慢慢不想
 </p>
 </div>
 <p>
-趁我在还能看得进书写得动代码的年纪，努力一回，看看这平庸的资质究竟能发挥几分。
+年轻，是我们的专属，有时候独自在想，青春过了永远就没了，所以珍惜当下，青春无悔。
 <p>
-<h3> Ps </h3>   
+<h3>题外话</h3>   
 <p>
 如果你想搭建一个跟我一样的博客，可以看
 <a href="/2017/03/HowToCreateBlog/"> Jekyll+Github个人博客构建之路 </a>
