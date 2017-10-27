@@ -63,7 +63,7 @@ title: 留言板「MESSAGE」
 {title:"The Edge of Glory",artist:"Lady Gaga",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/The%20Edge%20of%20Glory.mp3",cover:"http://p3.music.126.net/iYG3tZ2xSKrzf65BaDtEJQ==/7929677860524772.jpg?param=106x106",},
 {title:"Beautiful",artist:"Eminem ",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Beautiful.mp3",cover:"http://p4.music.126.net/F2fqWwTTT2DAOKPQKQ-G0A==/5892282813545901.jpg?param=106x106",},
 {title:"Hall of Fame",artist:"the script/will.i.am",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Hall%20of%20Fame.mp3",cover:"http://p4.music.126.net/d5ryd0uwq29KWk3bRZ1wsA==/45079976751142.jpg?param=106x106",},
-{title:"刚好遇见你",artist:"李玉刚",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/%E6%9D%8E%E7%8E%89%E5%88%9A%20-%20%E5%88%9A%E5%A5%BD%E9%81%87%E8%A7%81%E4%BD%A0.mp3",cover:"http://p4.music.126.net/Nn8kTtc14uWJw_UWbEc5mg==/7909886650478099.jpg?param=106x106",},
+{title:"I Saw Him",artist:"I Saw Him",mp3:"http://m10.music.126.net/20171027120549/329b3b62e2cbcff379f4ff56bf20f650/ymusic/6b21/1e61/4219/705cc3e8859535e52ea3ed5134dc1ef4.mp3",cover:"http://p1.music.126.net/PaCWRxXASgHp2yHl6E6w-g==/3262251001467554.jpg??param=106x106",},
 ];
   var isRotate = true;
   var autoplay = true;
