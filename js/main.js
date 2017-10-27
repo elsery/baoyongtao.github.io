@@ -1,5 +1,5 @@
 $(document).ready(function() {
-   var  img = '/img/'+Math.round(Math.random()*50)+'.jpg';
+   var  img = '/img/'+new Date().getDate()+'.jpg';
    $('.panel-cover').css('background','url('+img+') top left no-repeat ');
   $('a.blog-button').click(function() {
     // If already in blog, return early without animate overlay panel again.
