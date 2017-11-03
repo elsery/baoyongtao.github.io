@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "SpringBoot 配置文件 application.properties"
+title: "SpringBoot 配置文件 application"
 date: 2017-11-03 
 description: "SpringBoot,application.properties"
 tag: java,SpringBoot
