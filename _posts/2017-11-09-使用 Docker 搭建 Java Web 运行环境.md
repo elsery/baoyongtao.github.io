@@ -44,7 +44,7 @@ tag: Docker,Java
 
 > 首先，您要准备一个 CentOS 的操作系统，虚拟机也行。总之，可以通过 Linux 客户端工具访问到 CentOS 操作系统就行。
 
-** 需要说明的是，Ubuntu 或其它 Linux 操作系统也能玩 Docker，只不过本文选择了以 CentOS 为例，仅此而已。**
+**需要说明的是，Ubuntu 或其它 Linux 操作系统也能玩 Docker，只不过本文选择了以 CentOS 为例，仅此而已。**
 
 CentOS 具体要求如下：
 > 必须是 64 位操作系统
@@ -65,7 +65,7 @@ yum -y --enablerepo=elrepo-kernel install kernel-lt
 ```shell
 vi /etc/grub.conf
 ```
-** 将default=1修改为default=0。**
+**将default=1修改为default=0。**
 
 - 最后，通过reboot命令重启操作系统。
 - 重启后如果不出意外的话，再次查看内核，您的 CentOS 内核将会显示为 3.10。
@@ -103,9 +103,9 @@ ervice docker start
 
 **首先，访问 Docker 中文网，在首页中搜索名为“centos”的镜像，在搜索的结果中，有一个“官方镜像”，它就是我们所需的。**
 
-**    然后，进入 CentOS 官方镜像页面，在“Pull this repository”输入框中，有一段命令，把它复制下来，在自己的命令行上运行该命令，随后将立即下载该镜像。**
+**   然后，进入 CentOS 官方镜像页面，在“Pull this repository”输入框中，有一段命令，把它复制下来，在自己的命令行上运行该命令，随后将立即下载该镜像。**
 
-** 最后，使用以下命令查看本地所有的镜像：**
+**最后，使用以下命令查看本地所有的镜像：**
 
 ```shell
 docker images
