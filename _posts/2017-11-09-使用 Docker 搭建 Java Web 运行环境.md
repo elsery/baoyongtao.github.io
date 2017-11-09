@@ -57,16 +57,19 @@ CentOS 具体要求如下：
 - 如果执行以上命令后，输出的内核版本号低于 3.8，请参考下面的方法来来升级您的 Linux 内核。
 
 **对于 CentOS 6.5 而言，内核版本默认是 2.6。首先，可通过以下命令安装最新内核：**
+
 ```shell
 rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 rpm -ivh http://www.elrepo.org/elrepo-release-6-5.el6.elrepo.noarch.rpm
 yum -y --enablerepo=elrepo-kernel install kernel-lt
 ```
+
 随后，编辑以下配置文件：
 
 ```shell
 vi /etc/grub.conf
 ```
+
 **将default=1修改为default=0。**
 
 - 最后，通过reboot命令重启操作系统。
@@ -76,14 +79,17 @@ vi /etc/grub.conf
 ##   安装 Docker
 
 只需通过以下命令即可安装 Docker 软件：
+
 ```shell
 rpm -Uvh http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 yum -y install docker-io
 ```
+
 ##### 可使用以下命令，查看 Docker 是否安装成功：
 ```shell
 docker version
 ```
+
 **若输出了 Docker 的版本号，则说明安装成功，我们下面就可以开始使用 Docker 了。**
 
 可通过以下命令启动 Docker 服务：
@@ -91,6 +97,7 @@ docker version
 ```shell
 ervice docker start
 ```
+
 ##### -做法
 
 >就像曾经安装软件一样，我们首先需要有一张刻录了该软件的光盘，如果您使用的是虚拟光驱，那么就需要运行一种名为“镜像”的文件，通过它来安装软件。在 Docker 的世界里，也有一个名为“镜像”的东西，已经安装我们所需的操作系统，我们一般成为“Docker 镜像”，本文简称“镜像”。
@@ -112,15 +119,18 @@ ervice docker start
 ```shell
 docker images
 ```
+
 当下载完成后，您应该会看到：
 
 ```shell
 REPOSITORY TAG            IMAGE ID          CREATED             VIRTUAL           SIZE
 docker.cn/docker/centos   centos6           25c5298b1a36      7 weeks ago      215.8 MB
 ```
+
 **
 如果看到以上输出，说明您可以使用“docker.cn/docker/centos”这个镜像了，或将其称为仓库（Repository），该镜像有一个名为“centos6”的标签（Tag），此外还有一个名为“25c5298b1a36 ”的镜像 ID（可能您所看到的镜像 ID 与此处的不一致，那是正常现象，因为这个数字是随机生成的）。此外，我们可以看到该镜像只有 215.8 MB，非常小巧，而不像虚拟机的镜像文件那样庞大。
 **
+
 >现在镜像已经有了，我们下面就需要使用该镜像，来启动容器。
 
 #### 启动容器
@@ -132,6 +142,7 @@ docker.cn/docker/centos   centos6           25c5298b1a36      7 weeks ago      2
 ```shell
 docker run -i -t -v /root/software/:/mnt/software/ 25c5298b1a36 /bin/bash
 ```
+
 这条命令比较长，我们稍微分解一下，其实包含以下三个部分：
 
 ```shell
