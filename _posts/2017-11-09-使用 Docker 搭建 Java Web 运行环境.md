@@ -10,6 +10,8 @@ tag: Docker,Java
 
 > Docker 是 2014 年最为火爆的技术之一，几乎所有的程序员都听说过它。Docker 是一种“轻量级”容器技术，它几乎动摇了传统虚拟化技术的地位，现在国内外已经有越来越多的公司开始逐步使用 Docker 来替换现有的虚拟化平台了。作为一名 Java 程序员，我们是时候一起把 Docker 学起来了！
 
+
+
 ###### 本文会对虚拟化技术与 Docker 容器技术做一个对比，然后引出一些 Docker 的名词术语，比如：容器、镜像等，随后将使用 Docker 搭建一个 Java Web 运行环境，最后将对本文做一个总结。
 
 
@@ -103,7 +105,7 @@ ervice docker start
 
 **首先，访问 Docker 中文网，在首页中搜索名为“centos”的镜像，在搜索的结果中，有一个“官方镜像”，它就是我们所需的。**
 
-**   然后，进入 CentOS 官方镜像页面，在“Pull this repository”输入框中，有一段命令，把它复制下来，在自己的命令行上运行该命令，随后将立即下载该镜像。**
+**然后，进入 CentOS 官方镜像页面，在“Pull this repository”输入框中，有一段命令，把它复制下来，在自己的命令行上运行该命令，随后将立即下载该镜像。**
 
 **最后，使用以下命令查看本地所有的镜像：**
 
@@ -131,9 +133,11 @@ docker.cn/docker/centos   centos6           25c5298b1a36      7 weeks ago      2
 docker run -i -t -v /root/software/:/mnt/software/ 25c5298b1a36 /bin/bash
 ```
 这条命令比较长，我们稍微分解一下，其实包含以下三个部分：
+
 ```shell
 docker run <相关参数> <镜像 ID> <初始命令>
 ```
+
 其中，相关参数包括：
 >-i：表示以“交互模式”运行容器
 -t：表示容器启动后会进入其命令行
@@ -156,11 +160,13 @@ docker run <相关参数> <镜像 ID> <初始命令>
 ```shell
 tar -zxf /mnt/software/jdk-7u67-linux-x64.tar.gz -C .
 ```
+
   - 然后，重命名 JDK 目录：
 
 ```shell
 mv jdk1.7.0_67/ jdk/
 ```
+
   - 安装 Tomcat
 
   - 首先，解压 Tomcat 程序包：
@@ -168,11 +174,13 @@ mv jdk1.7.0_67/ jdk/
 ```shell
 tar -zxf /mnt/software/apache-tomcat-7.0.55.tar.gz -C .
 ```
+
   - 然后，重命名 Tomcat 目录：
 
 ```shell
 mv apache-tomcat-7.0.55/ tomcat/
 ```
+
   - 设置环境变量
 
   - 首先，编辑.bashrc文件
@@ -186,11 +194,13 @@ vi ~/.bashrc
 export JAVA_HOME=/opt/jdk
 export PATH=$PATH:$JAVA_HOME
 ```
+
   - 最后，需要使用source命令，让环境变量生效：
 
 ```
 source ~/.bashrc
 ```
+
   - 编写运行脚本
 
 我们需要编写一个运行脚本，当启动容器时，运行该脚本，启动 Tomcat，具体过程如下：
@@ -200,6 +210,7 @@ source ~/.bashrc
 ```
 vi /root/run.sh
 ```
+
   - 然后，编辑脚本内容如下：
 
 ```
@@ -207,6 +218,7 @@ vi /root/run.sh
 source ~/.bashrc
 sh /opt/tomcat/bin/catalina.sh run
 ```
+
   - 注意：这里必须先加载环境变量，然后使用 Tomcat 的运行脚本来启动 Tomcat 服务。
 
   - 最后，为运行脚本添加执行权限：
@@ -214,6 +226,7 @@ sh /opt/tomcat/bin/catalina.sh run
 ```
 chmod u+x /root/run.sh
 ```
+
   - 退出容器
 
 **当以上步骤全部完成后，可使用exit命令，退出容器。**
@@ -223,16 +236,20 @@ chmod u+x /root/run.sh
 ```
 docker ps
 ```
+
 此时，您应该看不到任何正在运行的程序，因为刚才已经使用exit命令退出的容器，此时容器处于停止状态，可使用如下命令查看所有容器：
 
 ```
 docker ps -a
 ```
+
 输出如下内容：
+
 ```
 CONTAINER ID        IMAGE                             COMMAND             CREATED             STATUS                      PORTS               NAMES
 57c312bbaad1        docker.cn/docker/centos:centos6   "/bin/bash"         27 minutes ago      Exited (0) 19 seconds ago                       naughty_goldstine
 ```
+
 记住以上CONTAINER ID（容器 ID），随后我们将通过该容器，创建一个可运行 Java Web 的镜像。
 
 创建 Java Web 镜像
@@ -242,6 +259,7 @@ CONTAINER ID        IMAGE                             COMMAND             CREATE
 ```
 docker commit 57c312bbaad1 else/javaweb:0.1
 ```
+
 该容器的 ID 是“57c312bbaad1”，所创建的镜像名是“huangyong/javaweb:0.1”，随后可使用镜像来启动 Java Web 容器。
 
 - 启动 Java Web 容器
@@ -253,11 +271,13 @@ REPOSITORY                TAG                 IMAGE ID            CREATED       
 huangyong/javaweb         0.1                 fc826a4706af        38 seconds ago      562.8 MB
 docker.cn/docker/centos   centos6             25c5298b1a36        7 weeks ago         215.8 MB
 ```
+
 >可见，此时已经看到了最新创建的镜像**“else/javaweb:0.1”**，其镜像 ID 是**“fc826a4706af”**。正如上面所描述的那样，我们可以通过“镜像名”或“镜像 ID”来启动容器，与上次启动容器不同的是，我们现在不再进入容器的命令行，而是直接启动容器内部的 Tomcat 服务。此时，需要使用以下命令：
 
 ```
 docker run -d -p 58080:8080 --name javaweb huangyong/javaweb:0.1 /root/run.sh
 ```
+
 - 稍作解释：
 
 >-d：表示以“守护模式”执行/root/run.sh脚本，此时 Tomcat 控制台不会出现在输出终端上。
@@ -273,6 +293,7 @@ docker run -d -p 58080:8080 --name javaweb huangyong/javaweb:0.1 /root/run.sh
 CONTAINER ID        IMAGE                   COMMAND             CREATED             STATUS              PORTS                     NAMES
 82f47923f926        else/javaweb:0.1   "/root/run.sh"      4 seconds ago       Up 3 seconds        0.0.0.0:58080->8080/tcp   javaweb
 ```
+
 品尝
 
 在浏览器中，输入以下地址，即可访问 Tomcat 首页：
