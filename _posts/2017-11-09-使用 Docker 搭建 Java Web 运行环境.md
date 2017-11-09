@@ -289,9 +289,14 @@ docker.cn/docker/centos   centos6             25c5298b1a36        7 weeks ago   
 
 >可见，此时已经看到了最新创建的镜像**“else/javaweb:0.1”**，其镜像 ID 是**“fc826a4706af”**。正如上面所描述的那样，我们可以通过“镜像名”或“镜像 ID”来启动容器，与上次启动容器不同的是，我们现在不再进入容器的命令行，而是直接启动容器内部的 Tomcat 服务。此时，需要使用以下命令：
 
+
+
+
 ```
 docker run -d -p 58080:8080 --name javaweb huangyong/javaweb:0.1 /root/run.sh
 ```
+
+
 
 - 稍作解释：
 
