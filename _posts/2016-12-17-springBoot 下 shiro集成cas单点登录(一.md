@@ -2,7 +2,7 @@
 layout: post
 title: "springBoot 下 shiro集成cas单点登录(一"
 date: 2016-12-17
-description: "java,cas,sso,shiro"
+description: "cas，shiro"
 tag: java 
 --- 
 
