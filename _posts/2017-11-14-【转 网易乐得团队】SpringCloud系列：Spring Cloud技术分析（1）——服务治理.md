@@ -8,19 +8,19 @@ tag: SpringCloud
 
   
 
->**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本文作为系列的第一篇正文，从Spring Cloud中的核心项目Spring Cloud Netflix入手，阐述了Spring Cloud Netflix的优势，介绍了Spring Cloud Netflix进行服务治理的技术原理。**
+>**本文作为系列的第一篇正文，从Spring Cloud中的核心项目Spring Cloud Netflix入手，阐述了Spring Cloud Netflix的优势，介绍了Spring Cloud Netflix进行服务治理的技术原理。**
 
 # 1\. Spring Cloud Netflix的优势
 
 >对于微服务的治理而言，核心就是服务的注册和发现。所以选择哪个组件，很大程度上要看它对于服务注册与发现的解决方案。在这个领域，开源架构很多，最常见的是Zookeeper，但这并不是一个最佳选择。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在分布式系统领域有个著名的CAP定理：**C——数据一致性，A——服务可用性，P——服务对网络分区故障的容错性**。这三个特性在任何分布式系统中不能同时满足，最多同时满足两个。
+在分布式系统领域有个著名的CAP定理：**C——数据一致性，A——服务可用性，P——服务对网络分区故障的容错性**。这三个特性在任何分布式系统中不能同时满足，最多同时满足两个。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zookeeper是著名Hadoop的一个子项目，很多场景下Zookeeper也作为Service发现服务解决方案。**Zookeeper保证的是CP**，即任何时刻对Zookeeper的访问请求能得到一致的数据结果，同时系统对网络分割具备容错性，但是它不能保证每次服务请求的可用性。从实际情况来分析，在使用Zookeeper获取服务列表时，如果zookeeper正在选主，或者Zookeeper集群中半数以上机器不可用，那么将就无法获得数据了。所以说，Zookeeper不能保证服务可用性。
+Zookeeper是著名Hadoop的一个子项目，很多场景下Zookeeper也作为Service发现服务解决方案。**Zookeeper保证的是CP**，即任何时刻对Zookeeper的访问请求能得到一致的数据结果，同时系统对网络分割具备容错性，但是它不能保证每次服务请求的可用性。从实际情况来分析，在使用Zookeeper获取服务列表时，如果zookeeper正在选主，或者Zookeeper集群中半数以上机器不可用，那么将就无法获得数据了。所以说，Zookeeper不能保证服务可用性。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;诚然，对于大多数分布式环境，尤其是涉及到数据存储的场景，数据一致性应该是首先被保证的，这也是zookeeper设计成CP的原因。但是对于服务发现场景来说，情况就不太一样了：针对同一个服务，即使注册中心的不同节点保存的服务提供者信息不尽相同，也并不会造成灾难性的后果。因为对于服务消费者来说，能消费才是最重要的——拿到可能不正确的服务实例信息后尝试消费一下，也好过因为无法获取实例信息而不去消费。**所以，对于服务发现而言，可用性比数据一致性更加重要——AP胜过CP**。而Spring Cloud Netflix在设计Eureka时遵守的就是AP原则。
+诚然，对于大多数分布式环境，尤其是涉及到数据存储的场景，数据一致性应该是首先被保证的，这也是zookeeper设计成CP的原因。但是对于服务发现场景来说，情况就不太一样了：针对同一个服务，即使注册中心的不同节点保存的服务提供者信息不尽相同，也并不会造成灾难性的后果。因为对于服务消费者来说，能消费才是最重要的——拿到可能不正确的服务实例信息后尝试消费一下，也好过因为无法获取实例信息而不去消费。**所以，对于服务发现而言，可用性比数据一致性更加重要——AP胜过CP**。而Spring Cloud Netflix在设计Eureka时遵守的就是AP原则。
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eureka本身是Netflix开源的一款提供服务注册和发现的产品，并且提供了相应的Java封装。在它的实现中，节点之间是相互平等的，部分注册中心的节点挂掉也不会对集群造成影响，即使集群只剩一个节点存活，也可以正常提供发现服务。哪怕是所有的服务注册节点都挂了，Eureka Clients上也会缓存服务调用的信息。这就保证了我们微服务之间的互相调用是足够健壮的。
+Eureka本身是Netflix开源的一款提供服务注册和发现的产品，并且提供了相应的Java封装。在它的实现中，节点之间是相互平等的，部分注册中心的节点挂掉也不会对集群造成影响，即使集群只剩一个节点存活，也可以正常提供发现服务。哪怕是所有的服务注册节点都挂了，Eureka Clients上也会缓存服务调用的信息。这就保证了我们微服务之间的互相调用是足够健壮的。
 
 除此之外，Spring Cloud Netflix背后强大的开源力量，也促使我们选择了Spring Cloud Netflix：
 
