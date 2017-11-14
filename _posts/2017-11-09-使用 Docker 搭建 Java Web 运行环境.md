@@ -314,9 +314,8 @@ CONTAINER ID        IMAGE                   COMMAND             CREATED         
 82f47923f926        else/javaweb:0.1   "/root/run.sh"      4 seconds ago       Up 3 seconds        0.0.0.0:58080->8080/tcp   javaweb
 ```
 
-品尝
 
-在浏览器中，输入以下地址，即可访问 Tomcat 首页：
+**在浏览器中，输入以下地址，即可访问 Tomcat 首页：**
 
 
 >http://192.168.65.132:58080/
