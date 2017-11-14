@@ -72,7 +72,7 @@ Eureka Server可以运行多个实例来构建集群，解决单点问题，但�
 
 Eureka的官方文档对Regin、Zone几乎没有提及，由于概念抽象，新手很难理解。因此，我们先来了解一下Region、Zone、Eureka集群三者的关系，如下图所示：
 
-[![image](http://tech.lede.com/2017/03/15/rd/server/SpringCloud1/RegionZone.png)](http://tech.lede.com/2017/03/15/rd/server/SpringCloud1/RegionZone.png)</center>
+[![image](http://tech.lede.com/2017/03/15/rd/server/SpringCloud1/RegionZone.png)](http://tech.lede.com/2017/03/15/rd/server/SpringCloud1/RegionZone.png)
 
 region和zone（或者Availability Zone）均是AWS的概念。在非AWS环境下，我们可以先简单地将region理解为Eureka集群，zone理解成机房。上图就可以理解为一个Eureka集群被部署在了zone1机房和zone2机房中。
 
@@ -95,7 +95,7 @@ Service Provider本质上是一个Eureka Client。它启动时，会调用服务
 
 如果Eureka Server在一段时间内没有接收到某个微服务节点的心跳，Eureka Server将会注销该微服务节点（自我保护模式除外）。
 
-[![image](http://tech.lede.com/2017/03/15/rd/server/SpringCloud1/EurekaServerEvict.png)](http://tech.lede.com/2017/03/15/rd/server/SpringCloud1/EurekaServerEvict.png)</center>
+[![image](http://tech.lede.com/2017/03/15/rd/server/SpringCloud1/EurekaServerEvict.png)](http://tech.lede.com/2017/03/15/rd/server/SpringCloud1/EurekaServerEvict.png)
 
 ### [](http://tech.lede.com/2017/03/15/rd/server/SpringCloud1/#2-1-3-Service-Consumer "2.1.3 Service Consumer")2.1.3 Service Consumer
 
