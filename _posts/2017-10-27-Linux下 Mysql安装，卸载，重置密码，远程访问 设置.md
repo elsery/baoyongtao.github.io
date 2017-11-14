@@ -3,7 +3,7 @@ layout: post
 title: "Linux下 Mysql安装，卸载，重置密码，远程访问 设置"
 date: 2017-10-27 
 description: "Linux下 Mysql安装，卸载，重置密码，远程访问 设置"
-tag: java，Mysql，Linux
+tag: Mysql
 --- 
 
   

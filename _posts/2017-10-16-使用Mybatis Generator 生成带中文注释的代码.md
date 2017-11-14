@@ -3,7 +3,7 @@ layout: post
 title: "使用Mybatis Generator 生成带中文注释的代码"
 date: 2017-10-16 
 description: "java"
-tag: java，mybatis
+tag: mybatis
 --- 
 
 
