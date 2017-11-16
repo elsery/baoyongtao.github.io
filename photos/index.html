@@ -16,6 +16,7 @@
                 <link rel="icon" type="image/png" href="/images/favicon.png" />
                 <link href="/images/favicon.png" rel="shortcut icon" type="image/png">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
 	</head>
 	<body class="is-loading-0 is-loading-1 is-loading-2">
 
@@ -32,6 +33,11 @@
 					</header>
 
 					<section id="thumbnails">
+						<article v-for="(img,index) in imgs">
+							<a class="thumbnail" :href="img.src"><img :src="img.src" alt="img.title"/></a>
+							<h2>Gravida quis varius enim</h2>
+							<p>Nunc egestas congue lorem. Nullam dictum placerat ex sapien tortor mattis.</p>
+						</article>
 					</section>
 
 					<footer id="footer">
@@ -47,19 +53,26 @@
 			<script src="assets/js/skel.min.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+			<script src="https://cdn.bootcss.com/vue/2.5.3/vue.min.js"></script>
 	</body>
 	<script type="text/javascript">
-	$(function(){
-		for(let i=1;i<=11;i++){
-			$("#thumbnails").append(
-		' <article>'+
-			'<a class="thumbnail" href="http://4315e09a.wiz03.com/share/resources/36800314-ab5d-44bc-8038-4ffb63ec62f4/index_files/'+i+'.jpg">'+
-				'<img src="http://4315e09a.wiz03.com/share/resources/36800314-ab5d-44bc-8038-4ffb63ec62f4/index_files/'+i+'.jpg" alt="预览图" /></a>'+
-			'<h2>Mattis lorem sodales</h2>'+
-			'<p>Feugiat auctor leo massa, nec vestibulum nisl erat faucibus, rutrum nulla.</p>'+
-		'</article>');
-		}
-	})
+	var imgApp = new Vue({
+		 el: '#thumbnails',
+		  methods : {
+			  showException : function(con){
+				  if(con.length>=30)layer.msg(con, {icon: 1,time: 3500,area:['800px','550px']}); 
+			  }
+		  },
+		  data:{
+			  imgs:[]
+		  },
+		  created:function(){
+			  var o = new Array();
+			  for(let i=1;i<11 ;i++){
+				  o.push({"title":i,"src":"http://4315e09a.wiz03.com/share/resources/36800314-ab5d-44bc-8038-4ffb63ec62f4/index_files/"+i+".jpg"});
+			  }
+			  this.imgs=o;
+		  }
+	});
 	</script>
 </html>
