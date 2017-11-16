@@ -3,6 +3,7 @@ layout: page
 title: 关于我「ABOUT ME」 
 date: 2017-03-01 
 ---
+
 <p>
 Me 一个虽时工程师，但却有着“天下心，走天下”的心态，工作请看简历「未更新」<a href="{{ site.baseurl }}/jianli.pdf" target="_blank"> 「我的简历」 </a>    
 <div style="color:#FF6633">
@@ -31,18 +32,12 @@ Me 一个虽时工程师，但却有着“天下心，走天下”的心态，�
 <p>
 <h3>题外话</h3>   
 <p>
-如果你想搭建一个跟我一样的博客，可以看
-<a href="/2017/03/HowToCreateBlog/"> Jekyll+Github个人博客构建之路 </a>
-教程
-<p>
-有关于博客主题的建议和意见都可以提给我，让我们一起来打造一个精美的主题吧~ 
-<p> 
-博客源码在 <a target="_blank" href='https://github.com/elsery/elsery.github.io/' target="_blank" >Github</a> 上，你的 Star 是我更新的动力，谢谢~
+如果你想搭建一个跟我一样的博客，客源码在 <a target="_blank" href='https://github.com/elsery/elsery.github.io/' target="_blank" >Github</a> 上，你的 Star 是我更新的动力，谢谢~
 <h3> 联系方式 </h3>         
 <script>
     function mousemethod(op,imgid){
     document.getElementById(imgid).style.display=op;
-    }
+}
 </script>
 <p>邮箱：18500395668@163.com  <a href="#" onmouseover="mousemethod('block','img1')" onmouseout="mousemethod('none','img1')" style="color:#FF4500;text-decoration:none">微信：18500395668</a>
 <p>
