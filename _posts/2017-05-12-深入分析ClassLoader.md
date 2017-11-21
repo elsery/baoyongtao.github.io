@@ -7,7 +7,7 @@ tag: JVM
 --- 
 
 
-  ## why？
+## why？
 
 ClassLoader，即[Java]类加载器，主要作用是将class加载到JVM内，同时它还要考虑class由谁来加载。在说java的类加载机制之前，还是像前面的博客一样，先说说为什么要知道java的类加载机制。个人认为主要有以下几个原因：
 
