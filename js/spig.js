@@ -3,7 +3,7 @@
 jQuery(document).ready(function ($) {
     $("#spig").mousedown(function (e) {
         if(e.which==3){
-        showMessage("秘密通道:<br /><a href=\"https://github.com/elsery\" title=\"留言\">留言</a>    <a href=\"https://github.com/elsery/\">首页</a>",10000);
+        showMessage("秘密通道:<br /><a href=\"https://github.com/elsery/liuyan\" title=\"留言\">留言</a>    <a href=\"https://github.com/elsery/\">首页</a>",10000);
 }
 });
 $("#spig").bind("contextmenu", function(e) {
