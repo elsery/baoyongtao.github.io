@@ -158,7 +158,7 @@ f5f935ee1a7a49e78511fbb51a048071
 
 ![](http://4315e09a.wiz03.com/share/resources/a24925ba-9e8f-4e24-bec1-643b4016d1e4/index_files/67448c95-ae15-498e-a4a6-36efceeadf1b.png)
 
-![](index_files/0.7941991102388417.png)
+![](http://4315e09a.wiz03.com/share/resources/a7f5677b-7a58-4e2c-a8eb-61d69ea507f0/index_files/0.7941991102388417.png)
 ###### 下载的位置是 ： /root/.jenkins/workspace/test
 ###### 下载完后会自动构建项目并发布到指定的容器
 ![](http://4315e09a.wiz03.com/share/resources/a24925ba-9e8f-4e24-bec1-643b4016d1e4/index_files/6f405743-a1fd-4467-8d88-08c4a0f0e936.png)
