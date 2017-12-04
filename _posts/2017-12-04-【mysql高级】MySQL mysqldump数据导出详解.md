@@ -413,7 +413,6 @@ mysqldump  -uroot -p --host=localhost --all-databases --plugin_dir=”/usr/local
 #客户端插件默认使用权限。
 mysqldump  -uroot -p --host=localhost --all-databases --default-auth=”/usr/local/lib/plugin/<PLUGIN>”
 ```
-![](index_files/0.11216546257498261.png)
 
 #### 错误处理
 - ``unknown option '--no-beep' ``
