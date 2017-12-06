@@ -63,7 +63,21 @@ layout: default
 <br>
 {% include share.html %}
 {% include dashang.html %}
-{% include new-old.html %}
+ <script>
+       window.tctipConfig = {
+           imagePrefix:  "",
+           cssPrefix:      "",
+           staticPrefix: "http://static.tctip.com",
+           buttonImageId: Math.ceil(Math.random()*8) + 1, //这里可以用一个固定的数字代替随机数
+           buttonTip:    "dashang", //或者 zanzhu
+           list:{
+               alipay: { qrimg: "/dsimg/alipay.jpg"}, //qrimg需要修改为自己的图片链接
+               weixin:{qrimg: "/dsimg/wechat.jpg"}, //qrimg需要修改为自己的图片链接
+               tenpay: { account: "904198612", className:"myR-on"} //如果不想添加财付通，此行代码可删除；如果要添加需要修改account为自己的账号
+           }
+       };
+ </script>
+<script src="/js/dashang.js"></script>
 
 
 
