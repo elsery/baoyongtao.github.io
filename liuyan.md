@@ -11,12 +11,8 @@ title: 留言板「MESSAGE」
 <p><h4>可以交流，可以感叹，可以发飙，但不可以订外卖 、、、</h4>   
 <p>
 <div>  
-           
- 
-<object width="330" height="180" data="http://music.163.com/style/swf/widget.swf?sid=441877316&type=0&auto=1&width=310&height=430" type="application/x-shockwave-flash"></object>  
-          
-  </div> 
--->
+	<object width="330" height="180" data="http://music.163.com/style/swf/widget.swf?sid=441877316&type=0&auto=0&width=310&height=430" 			type="application/x-shockwave-flash"></object>  
+</div> 
 
 
 <div id="QPlayer" class="QPlayer">
@@ -54,16 +50,27 @@ title: 留言板「MESSAGE」
 
 <script>
 	var	playlist = [
-{title:"My All",artist:"浜崎あゆみ",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/%E6%B5%9C%E5%B4%8E%E3%81%82%E3%82%86%E3%81%BF%20-%20MY%20ALL.mp3",cover:"http://p4.music.126.net/7VJn16zrictuj5kdfW1qHA==/3264450024433083.jpg?param=106x106",},
-{title:"Try Everything",artist:"Shakira",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Shakira%20-%20Try%20Everything.mp3",cover:"http://p4.music.126.net/KLw_TLTRUe9pClPv4vlEtQ==/936783906865219.jpg?param=106x106",},
-{title:"Victory",artist:"Two Steps From Hell",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Two%20Steps%20From%20Hell%20-%20Victory.mp3",cover:"http://p4.music.126.net/YXY1vPG5rtdV7w_cWDnNWw==/884007348732141.jpg?param=106x106",},
-{title:"Monody",artist:"TheFatRat,Laura Brehm",mp3:"http://omjh2j5h3.bkt.clouddn.com/TheFatRat,Laura%20Brehm%20-%20Monody.mp3",cover:"http://p3.music.126.net/1odRfg3HXWmYw02EMXKRKQ==/116548232557498.jpg?param=106x106",},
-{title:"Luv Letter",artist:"dj okawari ",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Luv%20Letter.mp3",cover:"http://p4.music.126.net/F2fqWwTTT2DAOKPQKQ-G0A==/5892282813545901.jpg?param=106x106",},
-{title:"Born this way",artist:"lady gaga ",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Born%20this%20way.mp3",cover:"http://p4.music.126.net/G2nCsXpMc81lcUY-pOHr9Q==/2528876745541310.jpg?param=106x106",},
-{title:"The Edge of Glory",artist:"Lady Gaga",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/The%20Edge%20of%20Glory.mp3",cover:"http://p3.music.126.net/iYG3tZ2xSKrzf65BaDtEJQ==/7929677860524772.jpg?param=106x106",},
-{title:"Beautiful",artist:"Eminem ",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Beautiful.mp3",cover:"http://p4.music.126.net/F2fqWwTTT2DAOKPQKQ-G0A==/5892282813545901.jpg?param=106x106",},
-{title:"Hall of Fame",artist:"the script/will.i.am",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Hall%20of%20Fame.mp3",cover:"http://p4.music.126.net/d5ryd0uwq29KWk3bRZ1wsA==/45079976751142.jpg?param=106x106",},
-{title:"I Saw Him",artist:"I Saw Him",mp3:"http://m10.music.126.net/20171027120549/329b3b62e2cbcff379f4ff56bf20f650/ymusic/6b21/1e61/4219/705cc3e8859535e52ea3ed5134dc1ef4.mp3",cover:"http://p1.music.126.net/PaCWRxXASgHp2yHl6E6w-g==/3262251001467554.jpg??param=106x106",},
+{title:"The Circle Of Life",artist:"Freedom Call",mp3:"http://m10.music.126.net/20171207103748/d1bcd3e6d1c978a0a3e174c19cf5b3c7/ymusic/acf0/9127/44a7/64c4f00f3df0fabaf4720e893bbaa676.mp3",cover:"http://p1.music.126.net/ABazEgv8jQgjvMLT9NxLPA==/6633353651289585.jpg?param=106x106"},
+
+{title:"She's Gone",artist:"Steelheart",mp3:"http://m10.music.126.net/20171207104016/b81bbe616c6545330cfef4364c0ca01c/ymusic/32b2/9f13/f13d/b68377a7bdd6df844d21a65de8a8a3e0.mp3",cover:"http://p1.music.126.net/JTPYaiUYS3PW7tWh43uNDg==/6674035581417715.jpg?param=106x106"},
+
+{title:"Someone In The Crowd",artist:"Emma Stone",mp3:"http://m10.music.126.net/20171207104536/1629222ce21a5999e391a2a07c2d11f8/ymusic/e73b/0fba/3072/758ed5353ca5cd759d9b906589c91a8f.mp3",cover:"http://p1.music.126.net/sQKLXBR_GThk5n-M2wtdDg==/758663033420897.jpg?param=106x106"},
+
+{title:"Another Day Of Sun",artist:"TheFatRat,Laura Brehm",mp3:"http://m10.music.126.net/20171207105203/c31ed4b45a42bbc4616fed3c1be9a468/ymusic/3b43/2a5e/7517/eaa1449e4e464f20da9f8ecd7ef00783.mp3",cover:"http://p1.music.126.net/sQKLXBR_GThk5n-M2wtdDg==/758663033420897.jpg?param=106x106"},
+
+{title:"Luv Letter",artist:"dj okawari ",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Luv%20Letter.mp3",cover:"http://p4.music.126.net/F2fqWwTTT2DAOKPQKQ-G0A==/5892282813545901.jpg?param=106x106"},
+
+{title:"Born this way",artist:"lady gaga ",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Born%20this%20way.mp3",cover:"http://p4.music.126.net/G2nCsXpMc81lcUY-pOHr9Q==/2528876745541310.jpg?param=106x106"},
+
+{title:"The Edge of Glory",artist:"Lady Gaga",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/The%20Edge%20of%20Glory.mp3",cover:"http://p3.music.126.net/iYG3tZ2xSKrzf65BaDtEJQ==/7929677860524772.jpg?param=106x106"},
+
+{title:"Beautiful",artist:"Eminem 
+",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Beautiful.mp3",cover:"http://p4.music.126.net/F2fqWwTTT2DAOKPQKQ-G0A==/5892282813545901.jpg?param=106x106"},
+
+{title:"Hall of Fame",artist:"the script/will.i.am",mp3:"http://omjh2j5h3.bkt.clouddn.com/music/Hall%20of%20Fame.mp3",cover:"http://p4.music.126.net/d5ryd0uwq29KWk3bRZ1wsA==/45079976751142.jpg?param=106x106"},
+
+{title:"I Saw Him",artist:"I Saw Him",mp3:"http://m10.music.126.net/20171027120549/329b3b62e2cbcff379f4ff56bf20f650/ymusic/6b21/1e61/4219/705cc3e8859535e52ea3ed5134dc1ef4.mp3",cover:"http://p1.music.126.net/PaCWRxXASgHp2yHl6E6w-g==/3262251001467554.jpg??param=106x106"}
+
 ];
   var isRotate = true;
   var autoplay = true;
