@@ -5,13 +5,13 @@ title: 留言板「MESSAGE」
 
 <img src="/images/avatar.jpg" alt="huanying"/>
 
-
+<p><h4>欢迎给为留言！</h4>     
 <p><h4>有什么话要对我说吗？</h4>     
 <P><h4>这里是你畅所欲言的地方，可以咨询，</h4>
-<p><h4>可以交流，可以感叹，可以发飙，但不可以订外卖 、、、</h4>   
+<p><h4>可以交流，可以感叹，可以发飙</h4>   
 <p>
 <div>  
-	<object width="330" height="180" data="http://music.163.com/style/swf/widget.swf?sid=441877316&type=0&auto=0&width=310&height=430" 			type="application/x-shockwave-flash"></object>  
+	<object width="330" height="180" data="https://music.163.com/style/swf/widget.swf?sid=441877316&type=0&auto=1&width=310&height=430" 			type="application/x-shockwave-flash"></object>  
 </div> 
 
 
