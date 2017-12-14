@@ -10,11 +10,6 @@ title: 留言板「MESSAGE」
 <P><h4>这里是你畅所欲言的地方，可以咨询，</h4>
 <p><h4>可以交流，可以感叹，可以发飙</h4>   
 <p>
-<div>  
-	<object width="330" height="180" data="https://music.163.com/style/swf/widget.swf?sid=441877316&type=0&auto=1&width=310&height=430" 			type="application/x-shockwave-flash"></object>  
-</div> 
-
-
 <div id="QPlayer" class="QPlayer">
 <div id="pContent">
 	<div id="player">
