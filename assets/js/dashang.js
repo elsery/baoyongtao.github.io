@@ -607,7 +607,7 @@ var tctipUtil = {
         staticPrefix: "",
         buttonImageId: "3",
         buttonTip: "dashang",
-        cssUrl: "css/myRewards.css"
+        cssUrl: "assets/css/myRewards.css"
     },
     listConfig: {
         alipay: {
