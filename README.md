@@ -18,7 +18,7 @@
 
 **[在线预览 &rarr;](https://elsery.github.io/)**
 
-![screenshot home](https://elsery.github.io//assets/images/screenshots/home.png)
+![screenshot](https://elsery.github.io//assets/images/screenshots/home.png)
 
 ## Fork 指南
 
