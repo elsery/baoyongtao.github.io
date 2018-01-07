@@ -39,13 +39,13 @@ tag: WEB
 </div>
 ```
 
-###### 手工将100多页的内容组合成上面的HTML结构太过耗费时间，不太现实，所以我决定使用JS来将文档内容的标题和段落解析出来，并进行HTML包装。
+** 手工将100多页的内容组合成上面的HTML结构太过耗费时间，不太现实，所以我决定使用JS来将文档内容的标题和段落解析出来，并进行HTML包装。**
 
-###### 由于不需要视图的支持，在snippets编写这段代码是最好的选择，经过几次调试修改，最终成果如下：
+** 由于不需要视图的支持，在snippets编写这段代码是最好的选择，经过几次调试修改，最终成果如下：**
 
 ![](http://7xslv0.com1.z0.glb.clouddn.com/chrome-debug/snippet-0.png)
 
-###### 最后，将Word文档内容复制到snippets中，执行解析函数，最终的解析出来的HTML结果打印到控制台：
+** 最后，将Word文档内容复制到snippets中，执行解析函数，最终的解析出来的HTML结果打印到控制台：**
 
 ![](http://7xslv0.com1.z0.glb.clouddn.com/chrome-debug/snippet-2.png)
 

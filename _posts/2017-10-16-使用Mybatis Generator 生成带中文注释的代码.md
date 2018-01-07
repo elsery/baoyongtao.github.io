@@ -10,7 +10,8 @@ tag: mybatis
 #### 项目地址 ： [mybatis generator](https://github.com/mybatis/generator/issues "mybatis generator")
 
 ## 1 背景
-###### 最近使用mybatis generator 生成代码，可以一键生成 dao  mapper映射文件  实体类文件，但是生成的实体类并没有数据库的注释，找了资料 可以开启生成注解的参数
+**最近使用mybatis generator 生成代码，可以一键生成 dao  mapper映射文件  实体类文件，但是生成的实体类并没有数据库的注释，找了资料 可以开启生成注解的参数**
+
 ```java```
      <commentGenerator type="org.mybatis.spring.MyCommentGenerator">
             <property name="suppressDate" value="true" />
@@ -18,7 +19,7 @@ tag: mybatis
             <property name="suppressAllComments" value="false" />
         </commentGenerator>
 ```
-###### 但是生成的注解是英文的 网上查下资料 需要重写生成的代码
+**但是生成的注解是英文的 网上查下资料 需要重写生成的代码**
 
 mybatis-generator.xml
 
@@ -72,7 +73,7 @@ mybatis-generator.xml
 </generatorConfiguration>
 ```
 
-###### 接下来解释下参数的意思
+** 接下来解释下参数的意思**
 
 ```xml
   <!-- tableName（必要）：要生成对象的表名； 注意：大小写敏感问题。正常情况下，MBG会自动的去识别数据库标识符的大小写敏感度，在一般情况下，MBG会 
@@ -93,13 +94,17 @@ mybatis-generator.xml
 ```
 
 我用的mybatis-generator 版本为
+
 ``` java
 mybatis-generator-core-1.3.2.jar
 ```
-###### 解决方法是要么重写一个类 或者使用自己定义的类生成，自己重写的类为，然后把这个作为新的maven项目重新打包安装到仓库即可
+
+**解决方法是要么重写一个类 或者使用自己定义的类生成，自己重写的类为，然后把这个作为新的maven项目重新打包安装到仓库即可**
+
 ```java
 org.mybatis.generator.internal.DefaultCommentGenerator
 ```
+
 内容为
 
 ```java
@@ -300,7 +305,7 @@ org.mybatis.generator.internal.DefaultCommentGenerator
         innerClass.addJavaDocLine(" */");
     }
 ```
-###### 如果要是自己写的类型可以新建一个类文件
+**如果要是自己写的类型可以新建一个类文件**
 
 ```java
 package com.dianjing.dianqun;
@@ -534,7 +539,8 @@ public class MyCommentGenerator implements CommentGenerator{
 
 } 
 ```
-###### 这个类写完我们可以使用生成代码的方式 生成具体文件
+**这个类写完我们可以使用生成代码的方式 生成具体文件**
+
 ```java
 package com.dianjing.dianqun;
 
@@ -588,5 +594,5 @@ public class Appplication {
 
 ```
 
-##### 这里就可以生成自己的数据库加注解字段了
-#### 参考资料 ：  [http://blog.csdn.net/isea533/article/details/42102297](http://blog.csdn.net/isea533/article/details/42102297)
+**这里就可以生成自己的数据库加注解字段了**
+**参考资料 ：  [http://blog.csdn.net/isea533/article/details/42102297](http://blog.csdn.net/isea533/article/details/42102297)**

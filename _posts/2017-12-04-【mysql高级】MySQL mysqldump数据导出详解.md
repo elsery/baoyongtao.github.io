@@ -109,7 +109,7 @@ mysqldump --host=192.168.80.137 -uroot -proot -C --databases test |mysql --host=
 
 ### 8.将主库的binlog位置和文件名追加到导出数据的文件中，--dump-slave
 
-##### 注意：--dump-slave命令如果当前服务器是从服务器那么使用该命令会执行stop slave来获取master binlog的文件和位置，等备份完后会自动执行start slave启动从服务器。但是如果是大的数据量备份会给从和主的延时变的更大，使用--dump-slave获取到的只是当前的从服务器的数据执行到的主的binglog的位置是（relay_mater_log_file,exec_master_log_pos),而不是主服务器当前的binlog执行的位置，主要是取决于主从的数据延时。
+** 注意：--dump-slave命令如果当前服务器是从服务器那么使用该命令会执行stop slave来获取master binlog的文件和位置，等备份完后会自动执行start slave启动从服务器。但是如果是大的数据量备份会给从和主的延时变的更大，使用--dump-slave获取到的只是当前的从服务器的数据执行到的主的binglog的位置是（relay_mater_log_file,exec_master_log_pos),而不是主服务器当前的binlog执行的位置，主要是取决于主从的数据延时。**
 
 >该参数在在从服务器上执行，相当于执行show slave status。当设置为1时，将会以CHANGE MASTER命令输出到数据文件；设置为2时，会在change前加上注释。
 >该选项将会打开--lock-all-tables，除非--single-transaction被指定。
