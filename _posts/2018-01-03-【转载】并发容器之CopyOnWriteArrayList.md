@@ -1,9 +1,10 @@
 ---
 layout: post
-title: "【转载】并发容器之CopyOnWriteArrayList"
-date: 2018-01-03 
-description: "CopyOnWriteArrayList"
-description: java,并发
+title: 【转载】并发容器之CopyOnWriteArrayList
+categories: Blog
+description: 聊聊并发-Java中的Copy-On-Write容器
+categories: [java,并发]
+keywords: 并发
 --- 
 
 
