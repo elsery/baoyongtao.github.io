@@ -1,74 +1,109 @@
-# Basic
-title: 鲍永涛
-subtitle: 自己的博客
-description: 欢迎来到我的个人网站~
-# 头像里面的标题 
-avatarTitle: Sharker
-# 头像里面的描述
-avatarDesc: java
-url: "http://blog.csdn.net/elsery/"
- 
-# Comment
-comment:
-    provider: duoshuo
-    duoshuo:
-    short_name: Sharker
+# ---------------- #
+#   Main Configs   #
+# ---------------- #
+baseurl:
+url: https://dannashen.github.io
+date_format: "ordinal"
+title: 鲍永涛的博客
+subtitle: "情商比代码重要"
+description: "鲍永涛的个人博客"
+keywords: Java
+timezone: Asia/Beijing
+encoding: "utf-8"
+side_bar_repo_limit: 10
 
-# Social
-social:
-    weibo: 2216859841
-    weixing: 18500395668 
-    github: elsery
-    # twitter: 
-    mail: 18500395668@foxmail.com
-    csdn: elsery
+# ---------------- #
+#      Author      #
+# ---------------- #
+author: 鲍永涛
+organization: 
+organization_url: 
+github_username: 鲍永涛
+location: Beijing, China
+email: 18500395668@163.com
 
-# 百度统计 
-# 使用博客模板请去掉或者更换 id 
-baidu:
-    id: 144d500dd9ac4a65465a14b95f3e4ade 
+# ---------------- #
+#    Navigation    #
+# ---------------- #
+navs:
+  -
+    href: /
+    label: 首页
 
-# Google Analytics
-# 使用博客模板请去掉或者更换 id
-#ga:
-# id: UA-84134159-3   
-#  host: auto  
+  -
+    href: /categories/
+    label: 分类
 
+  -
+    href: /wiki/
+    label: 维基
 
+  -
+    href: /links/
+    label: 链接
 
-permalink: /:year/:month/:title/
-# Format
+  -
+    href: /about/
+    label: 关于
+
+# ---------------- #
+#       RSS        #
+# ---------------- #
+subscribe_rss: /feed.xml
+
+# ---------------- #
+#      Jekyll      #
+# ---------------- #
+markdown: kramdown
+kramdown:
+    input: GFM
 highlighter: rouge
+paginate: 8
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
+permalink: /:year/:month/:day/:title/
+gems:
+    - jekyll-github-metadata
+    - rouge
+#     - jekyll-html-pipeline
+    - jekyll-paginate
+    - jekyll-sitemap
+    - jekyll-feed
+    - jemoji
+#     - jekyll-mentions
+collections:
+    wiki:
+        output: true
+        permalink: /wiki/:path/
 
-textColor: #FF0000
+repository: DannaShen/DannaShen.github.io
 
-# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
-cover_color: 
-
-# The blog button should not be removed.
-blog_button:
-    title: 博客主页
-
-# Navigation buttons in the front page.s
-nav:
-    - {title: 所有文章, description: archive, url: '/archive'}   
-    - {title: 标签, description: tags, url: '/tags'}   
-    - {title: 留言, description: liuyan, url: '/liuyan'}
-    - {title: 资源, description: ziyuan, url: '/ziyuan'}
-    - {title: 关于我, description: about, url: '/about'}
-
-          
-    
-
-# Pagination
-gems: [jekyll-paginate]
-paginate: 20
-paginate_path: "page/:num/"
-
-
-valine:
-  enable: true
-  appId: CWa3VWGExyX5qBwL6BQ7mwHv-gzGzoHsz
-  appKey: KxtOwoN1GTvwt1daWglcosv8
-
-
+# ---------------- #
+#      Comments    #
+# ---------------- #
+# support provider: disqus, gitment, gitalk
+comments_provider: gitalk
+disqus:
+    username: 
+# https://imsun.net/posts/gitment-introduction/
+gitment:
+    owner: elsery
+    repo: elsery/elsery.github.io
+    oauth:
+        client_id: b6be3a83bd15069f9594
+        client_secret: e651e8240f9134659fad15edd713ccc3915b1eae
+# https://github.com/gitalk/gitalk#install
+gitalk:
+    owner: elsery
+    repo: elsery.github.io
+    clientID: 3c05ed9743dccfb9abb2
+    clientSecret: 16c82ea137c10dd970b60d127dc73ccdc6970014
+# 在使用其它评论组件时可点击显示 Disqus
+lazy_load_disqus : false
+#这里都是配置 需要自己申请以后弄
+# ---------------- #
+#    Analytics     #
+# ---------------- #
+#google:
+#    analytics_id: UA-80669434-1
