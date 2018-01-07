@@ -3,7 +3,7 @@ layout: post
 title: "【Jenkins可持续集成】Jenkins - 持续集成 入门（一）"
 date: 2017-11-21 
 description: "Jenkins - 持续集成 入门（一）"
-tag: Jenkins
+description: Jenkins
 --- 
 
   

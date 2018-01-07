@@ -3,7 +3,7 @@ layout: post
 title: "使用 Docker 搭建 Java Web 运行环境"
 date: 2017-11-09 
 description: "Docker，Java"
-tag: Docker
+description: Docker
 --- 
 
   
@@ -127,12 +127,12 @@ docker images
 当下载完成后，您应该会看到：
 
 ```shell
-REPOSITORY TAG            IMAGE ID          CREATED             VIRTUAL           SIZE
+REPOSITORY description            IMAGE ID          CREATED             VIRTUAL           SIZE
 docker.cn/docker/centos   centos6           25c5298b1a36      7 weeks ago      215.8 MB
 ```
 
 **
-如果看到以上输出，说明您可以使用“docker.cn/docker/centos”这个镜像了，或将其称为仓库（Repository），该镜像有一个名为“centos6”的标签（Tag），此外还有一个名为“25c5298b1a36 ”的镜像 ID（可能您所看到的镜像 ID 与此处的不一致，那是正常现象，因为这个数字是随机生成的）。此外，我们可以看到该镜像只有 215.8 MB，非常小巧，而不像虚拟机的镜像文件那样庞大。
+如果看到以上输出，说明您可以使用“docker.cn/docker/centos”这个镜像了，或将其称为仓库（Repository），该镜像有一个名为“centos6”的标签（description），此外还有一个名为“25c5298b1a36 ”的镜像 ID（可能您所看到的镜像 ID 与此处的不一致，那是正常现象，因为这个数字是随机生成的）。此外，我们可以看到该镜像只有 215.8 MB，非常小巧，而不像虚拟机的镜像文件那样庞大。
 **
 
 >现在镜像已经有了，我们下面就需要使用该镜像，来启动容器。
@@ -282,7 +282,7 @@ docker commit 57c312bbaad1 else/javaweb:0.1
     - 有必要首先使用docker images命令，查看当前所有的镜像：
 
 ```
-REPOSITORY                TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+REPOSITORY                description                 IMAGE ID            CREATED             VIRTUAL SIZE
 huangyong/javaweb         0.1                 fc826a4706af        38 seconds ago      562.8 MB
 docker.cn/docker/centos   centos6             25c5298b1a36        7 weeks ago         215.8 MB
 ```
