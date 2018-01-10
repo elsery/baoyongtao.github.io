@@ -2,7 +2,7 @@
 layout: post
 title: "深入分析ClassLoader"
 date: 2017-05-12 
-description: "java，jvm"
+description: "ClassLoader，即类加载器，主要作用是将class加载到JVM内"
 categories: JVM
 --- 
 

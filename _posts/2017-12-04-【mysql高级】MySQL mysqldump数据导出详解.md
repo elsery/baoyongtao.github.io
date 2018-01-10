@@ -2,8 +2,8 @@
 layout: post
 title: "【mysql高级】MySQL mysqldump数据导出详解"
 date: 2017-12-04 
-description: "MySQL mysqldump数据导出详解"
-categories: mysql
+description: " 项目中需要导出一份线上数据库，作为线下测试用，由于数据量太多 只要导出指定数量的数据即可 查了下资料"
+categories: Mysql
 --- 
 
   

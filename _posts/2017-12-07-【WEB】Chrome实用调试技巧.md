@@ -2,7 +2,7 @@
 layout: post
 title: "【WEB】Chrome实用调试技巧"
 date: 2017-12-07 
-description: "Chrome实用调试技巧"
+description: "Chrome浏览器无疑是最受前端青睐的工具，原因除了界面简洁、大量的应用插件，良好的代码规范支持、强大的V8解释器之外，还因为Chrome开发者工具提供了大量的便捷功能，方便我们前端调试代码"
 categories: WEB
 --- 
 

@@ -2,7 +2,7 @@
 layout: post
 title: "【Jenkins可持续集成】Jenkins - 持续集成 入门（一）"
 date: 2017-11-21 
-description: "Jenkins - 持续集成 入门（一）"
+description: "Jenkins是基于Java开发的一种持续集成工具，用于监控持续重复的工作"
 categories: Jenkins
 --- 
 

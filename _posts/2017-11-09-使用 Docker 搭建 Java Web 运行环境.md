@@ -2,7 +2,7 @@
 layout: post
 title: "使用 Docker 搭建 Java Web 运行环境"
 date: 2017-11-09 
-description: "Docker，Java"
+description: "Docker 是 2014 年最为火爆的技术之一，几乎所有的程序员都听说过它。Docker 是一种“轻量级”容器技术，它几乎动摇了传统虚拟化技术的地位，"
 categories: Docker
 --- 
 

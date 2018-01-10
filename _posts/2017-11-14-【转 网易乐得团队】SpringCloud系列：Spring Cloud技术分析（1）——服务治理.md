@@ -2,7 +2,7 @@
 layout: post
 title: "【转 网易乐得团队】SpringCloud系列：Spring Cloud技术分析（1）——服务治理"
 date: 2017-11-14 
-description: "SpringCloud系列文章"
+description: "本文作为系列的第一篇正文，从Spring Cloud中的核心项目Spring Cloud Netflix入手，阐述了Spring Cloud Netflix的优势"
 categories: SpringCloud
 --- 
 
