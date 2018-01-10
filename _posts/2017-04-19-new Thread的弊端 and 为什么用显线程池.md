@@ -2,8 +2,8 @@
 layout: post
 title: "new Thread的弊端 and 为什么用显线程池"
 date: 2017-04-19 
-description: "java，线程"
-categories: java
+description: "执行一个异步任务你还只是如下new Thread吗"
+categories: Java
 --- 
 
 
