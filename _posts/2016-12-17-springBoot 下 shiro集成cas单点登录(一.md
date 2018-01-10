@@ -3,7 +3,7 @@ layout: post
 title: "springBoot 下 shiro集成cas单点登录(一"
 date: 2016-12-17
 description: "cas，shiro"
-tag: java 
+categories: java 
 --- 
 
 >  单点登录（Single Sign On , 简称 SSO ）是目前比较流行的服务于企业业务整合的解决方案之一， SSO 使得在多个应用系统中，用户只需要登录一次就可以访问所有相互信任的应用系统。CAS(Central Authentication Service)是一款不错的针对 Web 应用的单点登录框架，本文介绍了 CAS 的原理、协议、在 Tomcat 中的配置和使用，对于采用 CAS 实现轻量级单点登录解决方案的入门读者具有一定指导作用。

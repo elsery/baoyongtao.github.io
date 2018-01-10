@@ -3,7 +3,7 @@ layout: post
 title: "使用Mybatis Generator 生成带中文注释的代码"
 date: 2017-10-16 
 description: "java"
-tag: mybatis
+categories: mybatis
 --- 
 
 
@@ -150,19 +150,19 @@ org.mybatis.generator.internal.DefaultCommentGenerator
     }
 
     /**
-     * This method adds the custom javadoc tag for. You may do nothing if you do
-     * not wish to include the Javadoc tag - however, if you do not include the
-     * Javadoc tag then the Java merge capability of the eclipse plugin will
+     * This method adds the custom javadoc categories for. You may do nothing if you do
+     * not wish to include the Javadoc categories - however, if you do not include the
+     * Javadoc categories then the Java merge capability of the eclipse plugin will
      * break.
      * 
      * @param javaElement
      *            the java element
      */
-    protected void addJavadocTag(JavaElement javaElement, boolean markAsDoNotDelete) {
+    protected void addJavadoccategories(JavaElement javaElement, boolean markAsDoNotDelete) {
         javaElement.addJavaDocLine(" *");
         StringBuilder sb = new StringBuilder();
         sb.append(" * ");
-        sb.append(MergeConstants.NEW_ELEMENT_TAG);
+        sb.append(MergeConstants.NEW_ELEMENT_categories);
         if (markAsDoNotDelete) {
             sb.append(" do_not_delete_during_merge");
         }
@@ -175,7 +175,7 @@ org.mybatis.generator.internal.DefaultCommentGenerator
     }
 
     /**
-     * This method returns a formated date string to include in the Javadoc tag
+     * This method returns a formated date string to include in the Javadoc categories
      * and XML comments. You may return null if you do not want the date in
      * these documentation elements.
      * 
@@ -245,7 +245,7 @@ org.mybatis.generator.internal.DefaultCommentGenerator
             return;
         }
       method.addJavaDocLine("/**");
-      addJavadocTag(method, false);
+      addJavadoccategories(method, false);
       method.addJavaDocLine(" */");
     }
 
@@ -382,19 +382,19 @@ public class MyCommentGenerator implements CommentGenerator{
     }
 
     /**
-     * This method adds the custom javadoc tag for. You may do nothing if you do
-     * not wish to include the Javadoc tag - however, if you do not include the
-     * Javadoc tag then the Java merge capability of the eclipse plugin will
+     * This method adds the custom javadoc categories for. You may do nothing if you do
+     * not wish to include the Javadoc categories - however, if you do not include the
+     * Javadoc categories then the Java merge capability of the eclipse plugin will
      * break.
      * 
      * @param javaElement
      *            the java element
      */
-    protected void addJavadocTag(JavaElement javaElement, boolean markAsDoNotDelete) {
+    protected void addJavadoccategories(JavaElement javaElement, boolean markAsDoNotDelete) {
         javaElement.addJavaDocLine(" *");
         StringBuilder sb = new StringBuilder();
         sb.append(" * ");
-        sb.append(MergeConstants.NEW_ELEMENT_TAG);
+        sb.append(MergeConstants.NEW_ELEMENT_categories);
         if (markAsDoNotDelete) {
             sb.append(" do_not_delete_during_merge");
         }
@@ -407,7 +407,7 @@ public class MyCommentGenerator implements CommentGenerator{
     }
 
     /**
-     * This method returns a formated date string to include in the Javadoc tag
+     * This method returns a formated date string to include in the Javadoc categories
      * and XML comments. You may return null if you do not want the date in
      * these documentation elements.
      * 
@@ -477,7 +477,7 @@ public class MyCommentGenerator implements CommentGenerator{
             return;
         }
       method.addJavaDocLine("/**");
-      addJavadocTag(method, false);
+      addJavadoccategories(method, false);
       method.addJavaDocLine(" */");
     }
 

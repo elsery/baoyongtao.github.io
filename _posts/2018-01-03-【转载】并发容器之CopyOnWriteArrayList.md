@@ -3,7 +3,7 @@ layout: post
 title: "【转载】并发容器之CopyOnWriteArrayList"
 date: 2018-01-03 
 description: "CopyOnWriteArrayList"
-tag: java,并发
+categories: java,并发
 --- 
 
    

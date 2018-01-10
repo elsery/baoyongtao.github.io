@@ -3,7 +3,7 @@ layout: post
 title: "SpringBoot 配置文件 application.properties"
 date: 2017-11-03 
 description: "SpringBoot配置文件"
-tag: SpringBoot
+categories: SpringBoot
 --- 
 
   

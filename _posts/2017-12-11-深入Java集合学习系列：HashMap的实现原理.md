@@ -3,7 +3,7 @@ layout: post
 title: "深入Java集合学习系列：HashMap的实现原理"
 date: 2017-12-11 
 description: "深入Java集合学习系列"
-tag: Java
+categories: Java
 --- 
 
   

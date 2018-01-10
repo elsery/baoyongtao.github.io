@@ -3,7 +3,7 @@ layout: post
 title: "【mysql高级】MySQL mysqldump数据导出详解"
 date: 2017-12-04 
 description: "MySQL mysqldump数据导出详解"
-tag: mysql
+categories: mysql
 --- 
 
   
