@@ -12,11 +12,11 @@ categories: 并发
 
 　　以下是本文目录大纲：
 
--  <a href='#一.对ThreadLocal的理解'> 一.对ThreadLocal的理解</a>
+- <a href='#对ThreadLocal的理解'> 一.对ThreadLocal的理解</a>
 
-- <a href='#二.深入解析ThreadLocal类'> 二.深入解析ThreadLocal类</a>
+- <a href='#深入解析ThreadLocal类'> 二.深入解析ThreadLocal类</a>
 
-- <a href='#三.ThreadLocal的应用场景'> 三.ThreadLocal的应用场景</a>
+- <a href='#ThreadLocal的应用场景'> 三.ThreadLocal的应用场景</a>
 
  若有不正之处请多多谅解，并欢迎批评指正。请尊重作者劳动成果，转载请标明原文链接：[http://www.cnblogs.com/dolphin0520/p/3920407.html](http://www.cnblogs.com/dolphin0520/p/3920407.html)
 
