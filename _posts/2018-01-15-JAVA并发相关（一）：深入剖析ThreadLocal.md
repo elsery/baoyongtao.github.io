@@ -12,11 +12,11 @@ categories: 并发
 
 　　以下是本文目录大纲：
 
-- <a href='#对ThreadLocal的理解'> 一.对ThreadLocal的理解</a>
+- <a href='#一对threadlocal的理解'> 一.对ThreadLocal的理解</a>
 
-- <a href='#深入解析ThreadLocal类'> 二.深入解析ThreadLocal类</a>
+- <a href='#二深入解析threadlocal类'> 二.深入解析ThreadLocal类</a>
 
-- <a href='#ThreadLocal的应用场景'> 三.ThreadLocal的应用场景</a>
+- <a href='#三threadlocal的应用场景'> 三.ThreadLocal的应用场景</a>
 
  若有不正之处请多多谅解，并欢迎批评指正。请尊重作者劳动成果，转载请标明原文链接：[http://www.cnblogs.com/dolphin0520/p/3920407.html](http://www.cnblogs.com/dolphin0520/p/3920407.html)
 
@@ -344,21 +344,21 @@ public class Test {
 ```
 
 　　就可以直接不用先set而直接调用get了。
-  ## 三.ThreadLocal的应用场景
+
+## 三.ThreadLocal的应用场景
   
   　最常见的ThreadLocal使用场景为 用来解决 数据库连接、Session管理等。
 
 　　如：
 ```java
-private static ThreadLocal<Connection> connectionHolder
-= new ThreadLocal<Connection>() {
-public Connection initialValue() {
-    return DriverManager.getConnection(DB_URL);
-}
+	private static ThreadLocal<Connection> connectionHolder = new ThreadLocal<Connection>() {
+	public Connection initialValue() {
+	    return DriverManager.getConnection(DB_URL);
+	}
 };
  
 public static Connection getConnection() {
-return connectionHolder.get();
+	return connectionHolder.get();
 }
 ```
 　下面这段代码摘自：
