@@ -1,19 +1,25 @@
-- name: Software Engineer Keywords
+- name: 后端开发
   keywords:
-      - Java
-      - C++
-      - Python
-      - Design Patterns
-
-- name: Mobile Developer Keywords
+  - Java 基础
+  - Spring/Mvc/Boot/Cloud，Mybatis，JPA，Hibernate
+  - Dubbo，DubboX，RestFul
+  - 多线程，IO，并发处理，锁
+  - java中间件（标准JMS[MQ,AMQP]），Redis，Solr，Es
+  - JVM内存模型，GC监测/回收算法
+  - 网络安全（xss，csrf，文件上传漏洞，序列化漏洞）
+  - Jfinal，Beetle，shardingJDBC，Mycat
+- name: WEB前端
   keywords:
-      - Android
-      - Reverse Engineering
-
-- name: Windows Developer Keywords
-  keywords:
-      - Win32 SDK
-      - DuiLib
-      - WTL
-      - COM
-      - WinDbg
+  - JavaScript
+  - Node
+  - VUE
+  - jQuery
+  - Bootstrap
+  - Element
+  - Layui
+- name: 业余
+  keywords: 
+  - 初步DeepLearning
+  - Hadoop
+  - 数据挖掘
+  - 算法推荐
