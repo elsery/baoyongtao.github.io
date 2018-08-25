@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mysql优化explain分析sql语句执行效率"
-date: 2017-11-14 
+date: 2018-08-21
 description: "Explain命令在解决数据库性能上是第一推荐使用命令，大部分的性能问题可以通过此命令来简单的解决，Explain可以用来查看SQL语句的执行效 果，可以帮助选择更好的索引和优化查询语句，写出更好的优化语句。"
 categories: Nginx
 --- 
