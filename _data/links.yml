@@ -1,2 +1,28 @@
 - name: Sharker
   url: https://elsery.github.io
+- name: HanNLP【Java实现的一个NLP工具】
+  url: http://hanlp.linrunsoft.com/index.html
+- name: 我爱自然语言处理
+  url: http://www.52nlp.cn/
+- name: 【B站视频】 深度学习 TensorFlow 教程(中文全集)
+  url: https://www.bilibili.com/video/av21099556/
+- name: 【学习线路】怎样成为一名优秀的算法工程师
+  url: https://blog.csdn.net/sigai_csdn/article/details/81012167
+- name: 【理解SVM的三层境界】支持向量机通俗导论
+  url: https://blog.csdn.net/macyang/article/details/38782399/
+- name: 【影视界的好文】那些由真实事件改编的电影，直击人性黑暗面！
+  url: https://zhuanlan.zhihu.com/p/23037232
+- name: 【國立臺灣大學】高等微積分
+  url: http://ocw.aca.ntu.edu.tw/ntu-ocw/ocw/cou/101S130
+- name: 【入门基础】机器学习算法
+  url: https://feisky.xyz/machine-learning/
+- name: 挺详细的机器学习笔记【jupyter】
+  url: https://nbviewer.jupyter.org/github/zlotus/notes-LSJU-machine-learning/blob/master/ReadMe.ipynb
+- name: 【知乎】机器学习各领域数据集合
+  url: https://zhuanlan.zhihu.com/p/25138563
+- name: Java代码检测工具，可于Jenkins集成
+  url: https://www.sonarqube.org/
+- name: SS/SSR 简介和使用以及各个平台的应用
+  url: https://congcong0806.github.io/2018/04/20/SS/
+- name: 阿里云OSS中的视频截帧
+  url: https://help.aliyun.com/document_detail/64555.html?spm=a2c4g.11186623.6.1174.3a1b40afft8ZFF

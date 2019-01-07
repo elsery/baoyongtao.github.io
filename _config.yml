@@ -77,7 +77,7 @@ collections:
         output: true
         permalink: /wiki/:path/
 
-repository: DannaShen/DannaShen.github.io
+repository: elsery/elsery.github.io
 
 # ---------------- #
 #      Comments    #
@@ -93,7 +93,6 @@ gitment:
     oauth:
         client_id: b6be3a83bd15069f9594
         client_secret: e651e8240f9134659fad15edd713ccc3915b1eae
-# https://github.com/gitalk/gitalk#install
 gitalk:
     owner: elsery
     repo: elsery.github.io
