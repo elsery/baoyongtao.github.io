@@ -1,5 +1,3 @@
-- name: Sharker
-  url: https://elsery.github.io
 - name: HanNLP【Java实现的一个NLP工具】
   url: http://hanlp.linrunsoft.com/index.html
 - name: 我爱自然语言处理
