@@ -57,7 +57,17 @@
     {% endif %}
     <script src="{{ site.url }}/assets/vendor/jquery/dist/jquery.min.js"></script>
     <script src="{{ site.url }}/assets/js/jquery-ui.js"></script>
+   <script src="https://www.sobot.com/chat/frame/js/entrance.js?sysNum=b77ef36a461f48388ec479ef9584d26a" class="zhiCustomBtn" id="zhichiScript" data-args="manual=true"></script>
     <script type="text/javascript">
+        $(function(){
+           //初始化智齿咨询组件实例
+            var zhiManager = (getzhiSDKInstance());
+            //再调用load方法
+            zhiManager.on("load", function() {
+                zhiManager.initBtnDOM();
+            });
+        });
+       
     function toggleMenu() {
         var nav = document.getElementsByClassName("site-header-nav")[0];
         if (nav.style.display == "inline-flex") {
@@ -85,3 +95,4 @@
         </div>
     </header>
     <!-- / header -->
+ 
