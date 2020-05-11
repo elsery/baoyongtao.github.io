@@ -91,8 +91,8 @@ gitment:
     owner: elsery
     repo: elsery/elsery.github.io
     oauth:
-        client_id: b6be3a83bd15069f9594
-        client_secret: e651e8240f9134659fad15edd713ccc3915b1eae
+        client_id: ee91fd0bb582773651b4
+        client_secret: 4f88cc50bc916a2393e7dbb1ff43ae4bf9b53109
 gitalk:
     owner: elsery
     repo: elsery.github.io
