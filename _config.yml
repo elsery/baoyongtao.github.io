@@ -83,7 +83,7 @@ repository: elsery/elsery.github.io
 #      Comments    #
 # ---------------- #
 # support provider: disqus, gitment, gitalk
-comments_provider: gitalk
+comments_provider: gitment
 disqus:
     username: 
 # https://imsun.net/posts/gitment-introduction/
